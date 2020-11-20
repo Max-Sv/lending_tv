@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,500,500italic,400italic,300italic,100italic,700italic);body {
+  color: blue;
+}
+
+.bg-main,
+.bg-gragient {
+  height: 100vh;
+}
+
+.bg-gragient {
+  background: linear-gradient(90deg, #1D1F23 34.86%, rgba(29, 31, 35, 0) 82.74%);
+}
+
+.text22-26 {
+  font-family: Roboto, sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.header.container {
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 123px;
+}
+
+.header__logo {
+  margin-left: 8px;
+  margin-right: 56px;
+}
+
+.header__link a {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+.main__title {
+  margin: 0 0 54px 8px;
+}
+
+.main .main__description {
+  margin: 0 8px;
+}
+.main p {
+  width: 625px;
+  color: #fff;
+  margin-bottom: 26px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1250px;
+}
+
+@media (max-width: 1439px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
