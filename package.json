@@ -28,7 +28,9 @@
     "@material/checkbox": "^8.0.0",
     "@material/dialog": "^8.0.0",
     "@material/ripple": "^8.0.0",
+    "@material/snackbar": "^8.0.0",
     "@material/textfield": "^8.0.0",
-    "@material/theme": "^8.0.0"
+    "@material/theme": "^8.0.0",
+    "inputmask": "^5.0.5"
   }
 }

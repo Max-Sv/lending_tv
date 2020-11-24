@@ -1,9 +1,9 @@
-@use "@material/theme" with (
-  $primary: #fcb8ab,
-  $secondary: #fff,
-  $on-primary: #442b2d,
-  $on-secondary: #442b2d,
+@use "@material/theme"with ($primary: #fcb8ab,
+    $secondary: #fff,
+    $on-primary: #442b2d,
+    $on-secondary: #442b2d,
 );
+@use "@material/snackbar/mdc-snackbar";
 @use '@material/button';
 @use "@material/floating-label/mdc-floating-label";
 @use "@material/line-ripple/mdc-line-ripple";
@@ -14,6 +14,37 @@
 
 // @use "@material/form-field";
 
+@mixin mdc-text-field-outline-color($secondary) {
+    // & {
+    // &:not(.mdc-text-field--focused) {
+    //     border-color: #{$secondary};
+    // }
+
+    // &.mdc-text-field--focused {
+    //     border-color: darken($secondary, 20%);
+    // }
+
+    // &.mdc-text-field--invalid {
+    //     border-color: lighten($secondary, 20%);
+    // }
+    // }
+}
+
+.main-text-field {
+    @include mdc-text-field-outline-color(#fff);
+    border-width: 2px;
+    border-style: solid;
+    width: 339px;
+    height: 56px;
+    background: #ffffff;
+    border-radius: 44px;
+    .mdc-text-field__input {
+        caret-color: #a5a5a5;
+        font-size: 22px;
+        line-height: 26px;
+        color: #a5a5a5 !important;
+    }
+}
 
 @include button.core-styles;
 @include checkbox.core-styles;
@@ -32,12 +63,21 @@ $base-font: Roboto, sans-serif;
     width: 241px;
     height: 56px;
     border-radius: 44px;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    .mdc-button__ripple {
+        border-radius: 44px;
+    }
 }
 
-.mdc-button.mdc-button--unelevated:hover {
-    border-radius: 44px;
+.mdc-button.mdc-button--unelevated.disabled{
+    background-color: rgba(255, 255, 255, 0.05);
 }
-
+.mdc-notched-outline {
+    display: none;
+}
 .mdc-dialog .mdc-dialog__surface {
     border-radius: 8px;
     background-color: #1d1f23;
@@ -55,8 +95,8 @@ $base-font: Roboto, sans-serif;
     }
 
     .dialog__main-text {
-        font-size: 18px;
-        line-height: 150%;
+        font-size: 16px;
+        line-height: 24px;
         color: #ffffff;
     }
 
@@ -65,26 +105,51 @@ $base-font: Roboto, sans-serif;
         color: #ffffff;
         color: rgba(255, 255, 255, 0.5);
     }
-}
-.mdc-dialog {
+    .mdc-dialog__surface {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .mdc-dialog__content {
         display: flex;
         flex-direction: column;
+
         .dialog__top {
             display: flex;
             justify-content: space-between;
         }
     }
-}
-.dialog__checkbox {
-    display: flex;
-    align-items: center;
-    .checkbox__text {
-        font-size: 18px;
-        line-height: 21px;
-        color: rgba(255, 255, 255, 0.5);
+
+    .dialog__checkbox {
+        display: flex;
+        align-items: center;
+        .mdc-checkbox__native-control {
+            color: #fff;
+        }
+        .checkbox__text {
+            font-size: 18px;
+            line-height: 21px;
+            color: rgba(255, 255, 255, 0.5);
+        }
     }
 }
+
+
+
+.mdc-snackbar {
+    justify-content: flex-start;
+    margin-bottom: 95px !important;
+    .mdc-snackbar__surface {
+        width: 469px;
+        height: 66px;
+    }
+    .mdc-snackbar__label {
+        font-size: 22px;
+        line-height: 26px;
+        color: #ffffff;
+    }
+}
+
 .bg-gragient {
     background: linear-gradient(
         90deg,
@@ -141,7 +206,7 @@ a {
     }
 
     p {
-        width: 625px;
+        // width: 625px;
         color: #fff;
         margin-bottom: 26px;
     }
@@ -149,6 +214,13 @@ a {
 
 .main__form {
     display: flex;
+
+    .mdc-text-field-helper-text {
+        font-size: 14px;
+        line-height: 16px;
+        color: rgba(255, 255, 255, 0.5) !important;
+        margin-left: 160px;
+    }
 }
 
 .main__extra-block {

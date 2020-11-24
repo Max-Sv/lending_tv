@@ -23,7 +23,7 @@
                     </svg>
                 </div>
                 <div class="header__link">
-                    <a href="">ПЕРЕЙТИ НА САЙТ</a>
+                    <a href="https://tvplus.by/" target="_blank">ПЕРЕЙТИ НА САЙТ</a>
                 </div>
             </header>
             <main class="main container">
@@ -50,8 +50,8 @@
                 <div class="main__form">
                     <div class="text-field-container">
                         <div
-                            class="mdc-text-field text-field demo-text-field-outlined-shaped mdc-text-field--outlined mdc-text-field--no-label">
-                            <input type="text" id="text-field-outlined-no-label-2" class="mdc-text-field__input"
+                            class=" main-text-field mdc-text-field text-field  mdc-text-field--outlined mdc-text-field--no-label">
+                            <input type="text" class="main__phone-number-input mdc-text-field__input"
                                 aria-label="Text field aria label"
                                 aria-describedby="text-field-outlined-no-label-2-helper-text">
                             <div class="mdc-notched-outline mdc-notched-outline--no-label">
@@ -61,10 +61,10 @@
                         </div>
                         <div class="mdc-text-field-helper-line">
                             <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg"
-                                id="text-field-outlined-no-label-2-helper-text">Helper Text</p>
+                                id="text-field-outlined-no-label-2-helper-text">Введи свой номер life:)</p>
                         </div>
                     </div>
-                    <button id='test' class="mdc-button mdc-button--unelevated">
+                    <button  class="main__phone-number-button mdc-button mdc-button--unelevated">
                         <span class="mdc-button__ripple"></span> ПОДКЛЮЧИТЬ
                     </button>
                 </div>
@@ -92,7 +92,7 @@
         </div>
 
     </div>
-    <div class="mdc-dialog">
+    <div class="mdc-dialog active-service-dialog">
         <div class="mdc-dialog__container">
             <div class="mdc-dialog__surface" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title"
                 aria-describedby="my-dialog-content">
@@ -110,7 +110,7 @@
                     </div>
                     <p class="dialog__main-text">
                         Продолжая, Вы&nbsp;соглашаетесь с&nbsp;тем, что Вам будет подключен пакет Амедиатека бесплатно*
-                        на&nbsp;абонентский номер +375 (25) 123-45-67. Воспользоваться услугой, а&nbsp;так&nbsp;же
+                        на&nbsp;абонентский номер <span class="dialog__user-phone-number"> </span>. Воспользоваться услугой, а&nbsp;так&nbsp;же
                         отменить подписку&nbsp;Вы можете в&nbsp;сервисе TV+&nbsp;Беларусь через сайт https://tvplus.by
                         или официальные приложения для Android и&nbsp;iOS
                     </p>
@@ -120,8 +120,9 @@
                     </p>
                 </div>
                 <div class="dialog__checkbox">
-                    <div class="mdc-checkbox">
-                        <input type="checkbox" color='secondary' class="mdc-checkbox__native-control mdc-theme--secondary" id="checkbox-1" />
+                    <div class="mdc-checkbox active-service-checkbox">
+                        <input type="checkbox" color='secondary'
+                            class="mdc-checkbox__native-control" id="checkbox-1" />
                         <div class="mdc-checkbox__background">
                             <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
                                 <path class="mdc-checkbox__checkmark-path" fill="none"
@@ -131,14 +132,36 @@
                         </div>
                         <div class="mdc-checkbox__ripple"></div>
                     </div>
-                    <label for="checkbox-1"><p class="checkbox__text">С условиями использования сервиса согласен</p></label>
+                    <label for="checkbox-1">
+                        <p class="checkbox__text">С условиями использования сервиса согласен</p>
+                    </label>
                 </div>
                 <div class="mdc-dialog__actions">
-
+                    <button class="active-service-button mdc-button mdc-button--unelevated disabled" disabled>
+                        <span class="mdc-button__ripple" ></span> ПОДКЛЮЧИТЬ
+                    </button>
                 </div>
             </div>
         </div>
         <div class="mdc-dialog__scrim"></div>
+    </div>
+
+    <div class="container mdc-snackbar snackbar-no-number">
+        <div class="mdc-snackbar__surface" role="status" aria-relevant="additions">
+            <div class="mdc-snackbar__label" aria-atomic="false">
+                Введи свой номер телефона life:)
+            </div>
+            <div class="mdc-snackbar__actions" aria-atomic="true">
+                <div class="mdc-button mdc-snackbar__action">
+                    <svg class="mdc-button__label" width="21" height="21" viewBox="0 0 22 22" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21.5 2.615L19.385 0.5L11 8.885L2.615 0.5L0.5 2.615L8.885 11L0.5 19.385L2.615 21.5L11 13.115L19.385 21.5L21.5 19.385L13.115 11L21.5 2.615Z"
+                            fill="white" />
+                    </svg>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
