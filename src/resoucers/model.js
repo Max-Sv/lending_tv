@@ -3,7 +3,8 @@ export default  class Model {
         this.user = {
             phone: null,
             code: null,
-            active: false
+            active: false,
+            agreement: false
         }
     }
     bindShowActiveServiceDialog(callback) {
@@ -11,6 +12,9 @@ export default  class Model {
     }
     bindShowSnackbarNoNumber(callback) {
         this.onShowSnackbarNoNumber = callback
+    }
+    bindActiveButton(callback) {
+        this.onActiveButton = callback
     }
     addPhoneNumber(number) {
         let isCorrectNumber = this.checkPhoneNumber(number);
@@ -21,13 +25,24 @@ export default  class Model {
             this._showSnackbar();
         }
     }
+    setAgreementState(state) {
+        this.user.agreement = state;
+        this._activeButton(state);
+    }
+    _activeButton(state) {
+        this.onActiveButton(state)
+    }
     _showDialog(user) {
         this.onShowActiveServiceDialog(user)
     }
     _showSnackbar() {
         this.onShowSnackbarNoNumber()
     }
-    addCode(code) {
+    sendCode() {
+        const code = '123456';
+        this._addCode(code);
+    }
+    _addCode(code) {
         this.user.code = code;
     }
     verifyCode(code) {

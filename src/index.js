@@ -1,9 +1,10 @@
-import "./scss/reset.css";
+import "./scss/reset.scss";
 import "./scss/main.scss";
 // import { MDCRipple } from "@material/ripple";
-import View from './views/view'
-import Controller from './controllers/controller'
-import Model from './models/model'
+import View from './resoucers/view'
+import Controller from './resoucers/controller'
+import Model from './resoucers/model'
+
 // mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
 // mdc.ripple.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
 // const URL = "http://127.0.0.1:4001/sms";
@@ -19,4 +20,4 @@ import Model from './models/model'
 //     users = await (await fetch(URL, { method: "GET" })).json();
 //     console.log("test:", inputPhone.value.lenght);
 // }
-const app = new Controller(new Model(), new View())
+const app = new Controller(new Model(), new View());

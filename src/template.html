@@ -2,167 +2,243 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body class='body'>
-    <div class="bg-main">
-        <div class="bg-gragient">
-            <header class="header container">
-                <div class="header__logo">
-                    <svg width="52" height="33" viewBox="0 0 52 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <div class="bg-main">
+    <div class="bg-gragient">
+      <div class="bg-img-mob"> 
+        <div class="bg-gragient-mob">
+          <header class="header container">
+            <div class="header__pc-block">
+              <div class="header__logo">
+                <svg width="52" height="33" viewBox="0 0 52 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12.4716 13.8264V14.7896C12.4716 19.4238 12.4759 24.0587 12.4647 28.6929C12.4635 29.1854 12.4366 29.6973 12.3029 30.1661C11.9219 31.4972 10.5846 32.3195 9.20789 32.1318C7.81935 31.9428 6.77872 30.7644 6.7756 29.3156C6.76623 24.4554 6.7731 19.5953 6.7731 14.7345V13.8264C5.69874 13.8264 4.66998 13.8408 3.64246 13.8202C3.10466 13.8095 2.54999 13.807 2.0353 13.675C0.723581 13.3395 -0.114668 12.0529 0.0127556 10.6842C0.132059 9.39874 1.16707 8.26287 2.48441 8.21593C4.91795 8.12957 7.35587 8.15084 9.7913 8.14584C11.935 8.14146 14.0787 8.14709 16.2212 8.17838C17.7509 8.20091 18.5461 8.84926 19.1413 10.2417C20.8172 14.1613 22.5399 18.0614 24.2452 21.9678C24.2777 22.0423 24.3276 22.1086 24.4357 22.2882C25.8954 18.9563 27.3108 15.7264 28.7893 12.3533C29.7619 14.6669 31.597 15.1382 33.8313 14.9742C33.3479 16.1101 32.9219 17.1233 32.4871 18.1315C30.7725 22.108 29.0442 26.0794 27.3446 30.0628C26.7862 31.372 25.9148 32.1556 24.4294 32.1606C22.9503 32.165 22.0596 31.4183 21.4943 30.0979C19.2938 24.9548 17.0513 19.83 14.8651 14.6813C14.5834 14.0192 14.2568 13.7082 13.5391 13.8183C13.2342 13.8659 12.9151 13.8264 12.4716 13.8264Z"
+                    fill="white" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M51.9719 11.2647C51.9775 11.226 51.9837 11.1867 51.9875 11.148C51.9912 11.1049 51.9919 11.0619 51.9937 11.0188C51.9956 10.9763 52 10.9345 52 10.8908C52 10.884 51.9987 10.8758 51.9987 10.8684C51.9987 10.8596 52 10.8503 52 10.8409C51.9819 9.29415 50.804 8.12505 49.2429 8.11569C47.6656 8.10695 46.087 8.08822 44.5097 8.12068C43.9598 8.13129 43.8075 7.9353 43.83 7.41972C43.8631 6.65446 43.8387 5.88734 43.8387 5.12021H43.8312C43.8312 4.3768 43.8406 3.63215 43.83 2.88874C43.8056 1.2309 42.6284 0.00624188 41.0623 0C41.0573 0 41.053 0.000624188 41.0486 0.000624188C41.0442 0.000624188 41.0405 0 41.0361 0C40.9831 0 40.9313 0.0049935 40.8782 0.00811444C40.8395 0.009987 40.7996 0.009987 40.7609 0.0137321C40.744 0.0156047 40.7278 0.0187256 40.7115 0.0205982C39.8851 0.113602 39.1985 0.541795 38.7691 1.19532C38.7641 1.20281 38.7585 1.20968 38.7535 1.21654L38.7528 1.21717C38.4589 1.65472 38.2866 2.18216 38.2866 2.74892V2.82008C38.2866 2.83256 38.2847 2.84505 38.2847 2.85816C38.2666 4.39054 38.2604 5.92354 38.2791 7.45592C38.2853 7.94841 38.1349 8.1288 37.6224 8.11881C36.1356 8.09072 34.6476 8.10944 33.1595 8.11444C32.9822 8.11506 32.8125 8.12942 32.6464 8.15127C31.9998 8.19121 31.4149 8.45462 30.9667 8.86596C30.9418 8.88781 30.9174 8.9109 30.8931 8.93337C30.8831 8.94274 30.8737 8.9521 30.8637 8.96209C30.3619 9.4477 30.0704 10.1125 30.0723 10.889V10.8902V10.8908C30.0723 10.9888 30.0773 11.0843 30.0873 11.1786C30.1222 11.5275 30.2221 11.849 30.3731 12.1373C30.3875 12.166 30.4012 12.1948 30.4168 12.2228C30.4274 12.2416 30.4387 12.2597 30.4505 12.2778C30.9274 13.0923 31.8094 13.641 32.8212 13.641H33.1614C33.1695 13.641 33.1776 13.6422 33.1851 13.6422C34.6732 13.6485 36.1612 13.6641 37.6487 13.6441C38.1187 13.6372 38.2816 13.7933 38.276 14.2633C38.2579 15.7732 38.266 17.2838 38.2828 18.7943C38.2835 18.8374 38.2853 18.8804 38.2866 18.9241V19.1788C38.2866 20.6968 39.5175 21.9277 41.0361 21.9277C42.4356 21.9277 43.5884 20.8809 43.7607 19.5283C43.7957 19.3604 43.8175 19.1875 43.8219 19.0109C43.8593 17.5016 43.8662 15.9898 43.8256 14.4805C43.8106 13.9244 43.9311 13.6791 44.4142 13.641H44.8455C46.2631 13.6791 47.6825 13.6703 49.1012 13.641H49.2511C49.3678 13.641 49.482 13.631 49.5956 13.6173C49.5962 13.6173 49.5975 13.6167 49.5987 13.6167C49.6805 13.606 49.761 13.5929 49.8403 13.5755C50.927 13.352 51.7291 12.5262 51.9426 11.4538C51.9432 11.4501 51.9444 11.4464 51.945 11.4426C51.9563 11.3839 51.9644 11.3246 51.9719 11.2647Z"
+                    fill="#FBD900" />
+                </svg>
+              </div>
+    
+              <div class="header__link">
+                <a href="https://tvplus.by/" target="_blank">ПЕРЕЙТИ НА САЙТ</a>
+              </div>
+            </div>
+            <div  class="header__mob-block">
+              <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button menu-button mdc-menu-surface--anchor"
+              >
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 24H28V21.3333H4V24ZM4 17.3333H28V14.6667H4V17.3333ZM4 8V10.6667H28V8H4Z" fill="white"/>
+                </svg>
+                
+              </button>
+              <div class="mdc-menu mdc-menu-surface">
+                <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
+                  <li class="mdc-list-item item-top" role="menuitem">
+                    <div class="header__logo">
+                      <svg width="52" height="33" viewBox="0 0 52 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M12.4716 13.8264V14.7896C12.4716 19.4238 12.4759 24.0587 12.4647 28.6929C12.4635 29.1854 12.4366 29.6973 12.3029 30.1661C11.9219 31.4972 10.5846 32.3195 9.20789 32.1318C7.81935 31.9428 6.77872 30.7644 6.7756 29.3156C6.76623 24.4554 6.7731 19.5953 6.7731 14.7345V13.8264C5.69874 13.8264 4.66998 13.8408 3.64246 13.8202C3.10466 13.8095 2.54999 13.807 2.0353 13.675C0.723581 13.3395 -0.114668 12.0529 0.0127556 10.6842C0.132059 9.39874 1.16707 8.26287 2.48441 8.21593C4.91795 8.12957 7.35587 8.15084 9.7913 8.14584C11.935 8.14146 14.0787 8.14709 16.2212 8.17838C17.7509 8.20091 18.5461 8.84926 19.1413 10.2417C20.8172 14.1613 22.5399 18.0614 24.2452 21.9678C24.2777 22.0423 24.3276 22.1086 24.4357 22.2882C25.8954 18.9563 27.3108 15.7264 28.7893 12.3533C29.7619 14.6669 31.597 15.1382 33.8313 14.9742C33.3479 16.1101 32.9219 17.1233 32.4871 18.1315C30.7725 22.108 29.0442 26.0794 27.3446 30.0628C26.7862 31.372 25.9148 32.1556 24.4294 32.1606C22.9503 32.165 22.0596 31.4183 21.4943 30.0979C19.2938 24.9548 17.0513 19.83 14.8651 14.6813C14.5834 14.0192 14.2568 13.7082 13.5391 13.8183C13.2342 13.8659 12.9151 13.8264 12.4716 13.8264Z"
-                            fill="white" />
+                          d="M12.4716 13.8264V14.7896C12.4716 19.4238 12.4759 24.0587 12.4647 28.6929C12.4635 29.1854 12.4366 29.6973 12.3029 30.1661C11.9219 31.4972 10.5846 32.3195 9.20789 32.1318C7.81935 31.9428 6.77872 30.7644 6.7756 29.3156C6.76623 24.4554 6.7731 19.5953 6.7731 14.7345V13.8264C5.69874 13.8264 4.66998 13.8408 3.64246 13.8202C3.10466 13.8095 2.54999 13.807 2.0353 13.675C0.723581 13.3395 -0.114668 12.0529 0.0127556 10.6842C0.132059 9.39874 1.16707 8.26287 2.48441 8.21593C4.91795 8.12957 7.35587 8.15084 9.7913 8.14584C11.935 8.14146 14.0787 8.14709 16.2212 8.17838C17.7509 8.20091 18.5461 8.84926 19.1413 10.2417C20.8172 14.1613 22.5399 18.0614 24.2452 21.9678C24.2777 22.0423 24.3276 22.1086 24.4357 22.2882C25.8954 18.9563 27.3108 15.7264 28.7893 12.3533C29.7619 14.6669 31.597 15.1382 33.8313 14.9742C33.3479 16.1101 32.9219 17.1233 32.4871 18.1315C30.7725 22.108 29.0442 26.0794 27.3446 30.0628C26.7862 31.372 25.9148 32.1556 24.4294 32.1606C22.9503 32.165 22.0596 31.4183 21.4943 30.0979C19.2938 24.9548 17.0513 19.83 14.8651 14.6813C14.5834 14.0192 14.2568 13.7082 13.5391 13.8183C13.2342 13.8659 12.9151 13.8264 12.4716 13.8264Z"
+                          fill="white" />
                         <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M51.9719 11.2647C51.9775 11.226 51.9837 11.1867 51.9875 11.148C51.9912 11.1049 51.9919 11.0619 51.9937 11.0188C51.9956 10.9763 52 10.9345 52 10.8908C52 10.884 51.9987 10.8758 51.9987 10.8684C51.9987 10.8596 52 10.8503 52 10.8409C51.9819 9.29415 50.804 8.12505 49.2429 8.11569C47.6656 8.10695 46.087 8.08822 44.5097 8.12068C43.9598 8.13129 43.8075 7.9353 43.83 7.41972C43.8631 6.65446 43.8387 5.88734 43.8387 5.12021H43.8312C43.8312 4.3768 43.8406 3.63215 43.83 2.88874C43.8056 1.2309 42.6284 0.00624188 41.0623 0C41.0573 0 41.053 0.000624188 41.0486 0.000624188C41.0442 0.000624188 41.0405 0 41.0361 0C40.9831 0 40.9313 0.0049935 40.8782 0.00811444C40.8395 0.009987 40.7996 0.009987 40.7609 0.0137321C40.744 0.0156047 40.7278 0.0187256 40.7115 0.0205982C39.8851 0.113602 39.1985 0.541795 38.7691 1.19532C38.7641 1.20281 38.7585 1.20968 38.7535 1.21654L38.7528 1.21717C38.4589 1.65472 38.2866 2.18216 38.2866 2.74892V2.82008C38.2866 2.83256 38.2847 2.84505 38.2847 2.85816C38.2666 4.39054 38.2604 5.92354 38.2791 7.45592C38.2853 7.94841 38.1349 8.1288 37.6224 8.11881C36.1356 8.09072 34.6476 8.10944 33.1595 8.11444C32.9822 8.11506 32.8125 8.12942 32.6464 8.15127C31.9998 8.19121 31.4149 8.45462 30.9667 8.86596C30.9418 8.88781 30.9174 8.9109 30.8931 8.93337C30.8831 8.94274 30.8737 8.9521 30.8637 8.96209C30.3619 9.4477 30.0704 10.1125 30.0723 10.889V10.8902V10.8908C30.0723 10.9888 30.0773 11.0843 30.0873 11.1786C30.1222 11.5275 30.2221 11.849 30.3731 12.1373C30.3875 12.166 30.4012 12.1948 30.4168 12.2228C30.4274 12.2416 30.4387 12.2597 30.4505 12.2778C30.9274 13.0923 31.8094 13.641 32.8212 13.641H33.1614C33.1695 13.641 33.1776 13.6422 33.1851 13.6422C34.6732 13.6485 36.1612 13.6641 37.6487 13.6441C38.1187 13.6372 38.2816 13.7933 38.276 14.2633C38.2579 15.7732 38.266 17.2838 38.2828 18.7943C38.2835 18.8374 38.2853 18.8804 38.2866 18.9241V19.1788C38.2866 20.6968 39.5175 21.9277 41.0361 21.9277C42.4356 21.9277 43.5884 20.8809 43.7607 19.5283C43.7957 19.3604 43.8175 19.1875 43.8219 19.0109C43.8593 17.5016 43.8662 15.9898 43.8256 14.4805C43.8106 13.9244 43.9311 13.6791 44.4142 13.641H44.8455C46.2631 13.6791 47.6825 13.6703 49.1012 13.641H49.2511C49.3678 13.641 49.482 13.631 49.5956 13.6173C49.5962 13.6173 49.5975 13.6167 49.5987 13.6167C49.6805 13.606 49.761 13.5929 49.8403 13.5755C50.927 13.352 51.7291 12.5262 51.9426 11.4538C51.9432 11.4501 51.9444 11.4464 51.945 11.4426C51.9563 11.3839 51.9644 11.3246 51.9719 11.2647Z"
-                            fill="#FBD900" />
-                    </svg>
-                </div>
-                <div class="header__link">
-                    <a href="https://tvplus.by/" target="_blank">ПЕРЕЙТИ НА САЙТ</a>
-                </div>
-            </header>
-            <main class="main container">
-                <div class="main__title">
-                    <svg width="746" height="71" viewBox="0 0 746 71" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M599.288 71V0.734614H617.339V27.3642H618.639L635.137 0.734614H655.787L636.545 31.7351L658.675 68.1717V71H639L624.126 44.0766H617.086V70.8898L599.288 71ZM34.5854 28.6865L42.5278 47.0517H34.5493L28.3398 62.2214H48.1958L52.2392 71H69.3513V68.3921L38.4122 0.367307H30.867L0 68.3921V71H17.1483L34.5854 28.6865ZM149.244 0.734614H155.526V71H137.475V39.7791L122.746 55.3896H120.76L106.319 39.7791V71H88.2686V0.734614H94.7669L121.735 31.1474L149.244 0.734614ZM224.769 16.9695H199.281V26.8867H222.675V42.791H199.281V55.0957H225.636V71H181.772V0.918268H224.769V16.9695ZM275.997 71H250.04V0.918268H275.997C320.872 1.13865 320.872 70.7796 275.997 71ZM267.622 54.6917H275.997C297.947 54.6917 297.947 17.2633 275.997 17.2633H267.622V54.6917ZM365.169 55.0957V70.8163H330.258V55.0957H338.995V16.5654H330.944V0.918268H364.627V16.5654H356.396V55.0957H365.169ZM431.704 62.1847H404.556L400.548 71H383.328V68.3921L414.303 0H421.884L452.932 68.3554V70.9633H435.711L431.704 62.1847ZM418.022 28.4661L410.26 46.8314H426L418.022 28.4661ZM459.827 16.9695V0.918268H510.983V16.9695H494.16V71H476.759V16.9695H459.827ZM576.111 16.9695H550.659V26.8867H574.017V42.791H550.623V55.0957H576.977V71H533.114V0.918268H576.075L576.111 16.9695ZM728.243 71H745.5V68.3921L714.489 0H706.907L675.824 68.3921V71H693.153L697.232 62.1847H717.16L710.914 46.9048H702.9L710.878 28.5396L728.243 71Z"
-                            fill="white" />
-                    </svg>
-                </div>
-                <div class="main__description">
-                    <p class="text22-26">
-                        Амедиатека&nbsp;&mdash; это премьеры лучших сериалов планеты одновременно со&nbsp;всем миром.
-                        Вас ждут новые проекты и&nbsp;вся библиотека HBO, хиты ведущих телеканалов и&nbsp;студий мира
-                        (FOX, Showtime, Starz, BBC, ABC Studios, Sony Pictures) и&nbsp;новые российские сериалы.
-                    </p>
-                    <p class="text22-26">
-                        &laquo;Хороший доктор&raquo;, &laquo;Анатомия страсти&raquo;, &laquo;Игра престолов&raquo;,
-                        &laquo;Убивая Еву&raquo;, &laquo;Сопрано&raquo;, &laquo;Декстер&raquo;, &laquo;Настоящий
-                        детектив&raquo;, &laquo;Миллиарды&raquo;, &laquo;Силиконовая долина&raquo;&nbsp;&mdash; это лишь
-                        малая часть библиотеки, в&nbsp;которую входят хиты лучших зарубежных студий.
-                    </p>
-                </div>
-                <div class="main__form">
-                    <div class="text-field-container">
-                        <div
-                            class=" main-text-field mdc-text-field text-field  mdc-text-field--outlined mdc-text-field--no-label">
-                            <input type="text" class="main__phone-number-input mdc-text-field__input"
-                                aria-label="Text field aria label"
-                                aria-describedby="text-field-outlined-no-label-2-helper-text">
-                            <div class="mdc-notched-outline mdc-notched-outline--no-label">
-                                <div class="mdc-notched-outline__leading"></div>
-                                <div class="mdc-notched-outline__trailing"></div>
-                            </div>
-                        </div>
-                        <div class="mdc-text-field-helper-line">
-                            <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg"
-                                id="text-field-outlined-no-label-2-helper-text">Введи свой номер life:)</p>
-                        </div>
+                          d="M51.9719 11.2647C51.9775 11.226 51.9837 11.1867 51.9875 11.148C51.9912 11.1049 51.9919 11.0619 51.9937 11.0188C51.9956 10.9763 52 10.9345 52 10.8908C52 10.884 51.9987 10.8758 51.9987 10.8684C51.9987 10.8596 52 10.8503 52 10.8409C51.9819 9.29415 50.804 8.12505 49.2429 8.11569C47.6656 8.10695 46.087 8.08822 44.5097 8.12068C43.9598 8.13129 43.8075 7.9353 43.83 7.41972C43.8631 6.65446 43.8387 5.88734 43.8387 5.12021H43.8312C43.8312 4.3768 43.8406 3.63215 43.83 2.88874C43.8056 1.2309 42.6284 0.00624188 41.0623 0C41.0573 0 41.053 0.000624188 41.0486 0.000624188C41.0442 0.000624188 41.0405 0 41.0361 0C40.9831 0 40.9313 0.0049935 40.8782 0.00811444C40.8395 0.009987 40.7996 0.009987 40.7609 0.0137321C40.744 0.0156047 40.7278 0.0187256 40.7115 0.0205982C39.8851 0.113602 39.1985 0.541795 38.7691 1.19532C38.7641 1.20281 38.7585 1.20968 38.7535 1.21654L38.7528 1.21717C38.4589 1.65472 38.2866 2.18216 38.2866 2.74892V2.82008C38.2866 2.83256 38.2847 2.84505 38.2847 2.85816C38.2666 4.39054 38.2604 5.92354 38.2791 7.45592C38.2853 7.94841 38.1349 8.1288 37.6224 8.11881C36.1356 8.09072 34.6476 8.10944 33.1595 8.11444C32.9822 8.11506 32.8125 8.12942 32.6464 8.15127C31.9998 8.19121 31.4149 8.45462 30.9667 8.86596C30.9418 8.88781 30.9174 8.9109 30.8931 8.93337C30.8831 8.94274 30.8737 8.9521 30.8637 8.96209C30.3619 9.4477 30.0704 10.1125 30.0723 10.889V10.8902V10.8908C30.0723 10.9888 30.0773 11.0843 30.0873 11.1786C30.1222 11.5275 30.2221 11.849 30.3731 12.1373C30.3875 12.166 30.4012 12.1948 30.4168 12.2228C30.4274 12.2416 30.4387 12.2597 30.4505 12.2778C30.9274 13.0923 31.8094 13.641 32.8212 13.641H33.1614C33.1695 13.641 33.1776 13.6422 33.1851 13.6422C34.6732 13.6485 36.1612 13.6641 37.6487 13.6441C38.1187 13.6372 38.2816 13.7933 38.276 14.2633C38.2579 15.7732 38.266 17.2838 38.2828 18.7943C38.2835 18.8374 38.2853 18.8804 38.2866 18.9241V19.1788C38.2866 20.6968 39.5175 21.9277 41.0361 21.9277C42.4356 21.9277 43.5884 20.8809 43.7607 19.5283C43.7957 19.3604 43.8175 19.1875 43.8219 19.0109C43.8593 17.5016 43.8662 15.9898 43.8256 14.4805C43.8106 13.9244 43.9311 13.6791 44.4142 13.641H44.8455C46.2631 13.6791 47.6825 13.6703 49.1012 13.641H49.2511C49.3678 13.641 49.482 13.631 49.5956 13.6173C49.5962 13.6173 49.5975 13.6167 49.5987 13.6167C49.6805 13.606 49.761 13.5929 49.8403 13.5755C50.927 13.352 51.7291 12.5262 51.9426 11.4538C51.9432 11.4501 51.9444 11.4464 51.945 11.4426C51.9563 11.3839 51.9644 11.3246 51.9719 11.2647Z"
+                          fill="#FBD900" />
+                      </svg>
                     </div>
-                    <button  class="main__phone-number-button mdc-button mdc-button--unelevated">
-                        <span class="mdc-button__ripple"></span> ПОДКЛЮЧИТЬ
-                    </button>
+                    <div>
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25.3333 8.54675L23.4533 6.66675L16 14.1201L8.54667 6.66675L6.66667 8.54675L14.12 16.0001L6.66667 23.4534L8.54667 25.3334L16 17.8801L23.4533 25.3334L25.3333 23.4534L17.88 16.0001L25.3333 8.54675Z" fill="white"/>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="mdc-list-item item-middle" role="menuitem">
+                    <span class="mdc-list-item__ripple"></span>
+                    <span class="mdc-list-item__text">ПЕРЕЙТИ НА САЙТ</span>
+                  </li>
+                  <li class="mdc-list-item" role="menuitem">
+                    <span class="mdc-list-item__ripple"></span>
+                    <span class="mdc-list-item__text">ПРАВИЛА ПОЛЬЗОВАНИЯ</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+  
+          </header>
+          <main class="main container">
+            <div class="main__title">
+              <svg width="746" height="71" viewBox="0 0 746 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M599.288 71V0.734614H617.339V27.3642H618.639L635.137 0.734614H655.787L636.545 31.7351L658.675 68.1717V71H639L624.126 44.0766H617.086V70.8898L599.288 71ZM34.5854 28.6865L42.5278 47.0517H34.5493L28.3398 62.2214H48.1958L52.2392 71H69.3513V68.3921L38.4122 0.367307H30.867L0 68.3921V71H17.1483L34.5854 28.6865ZM149.244 0.734614H155.526V71H137.475V39.7791L122.746 55.3896H120.76L106.319 39.7791V71H88.2686V0.734614H94.7669L121.735 31.1474L149.244 0.734614ZM224.769 16.9695H199.281V26.8867H222.675V42.791H199.281V55.0957H225.636V71H181.772V0.918268H224.769V16.9695ZM275.997 71H250.04V0.918268H275.997C320.872 1.13865 320.872 70.7796 275.997 71ZM267.622 54.6917H275.997C297.947 54.6917 297.947 17.2633 275.997 17.2633H267.622V54.6917ZM365.169 55.0957V70.8163H330.258V55.0957H338.995V16.5654H330.944V0.918268H364.627V16.5654H356.396V55.0957H365.169ZM431.704 62.1847H404.556L400.548 71H383.328V68.3921L414.303 0H421.884L452.932 68.3554V70.9633H435.711L431.704 62.1847ZM418.022 28.4661L410.26 46.8314H426L418.022 28.4661ZM459.827 16.9695V0.918268H510.983V16.9695H494.16V71H476.759V16.9695H459.827ZM576.111 16.9695H550.659V26.8867H574.017V42.791H550.623V55.0957H576.977V71H533.114V0.918268H576.075L576.111 16.9695ZM728.243 71H745.5V68.3921L714.489 0H706.907L675.824 68.3921V71H693.153L697.232 62.1847H717.16L710.914 46.9048H702.9L710.878 28.5396L728.243 71Z"
+                  fill="white" />
+              </svg>
+            </div>
+            <div class="main__description">
+              <p class="main__description-text text22-26">
+                Амедиатека&nbsp;&mdash; это премьеры лучших сериалов планеты одновременно со&nbsp;всем миром.
+                Вас ждут новые проекты и&nbsp;вся библиотека HBO, хиты ведущих телеканалов и&nbsp;студий мира
+                (FOX, Showtime, Starz, BBC, ABC Studios, Sony Pictures) и&nbsp;новые российские сериалы.
+              </p>
+              <p class="main__description-text text22-26">
+                &laquo;Хороший доктор&raquo;, &laquo;Анатомия страсти&raquo;, &laquo;Игра престолов&raquo;,
+                &laquo;Убивая Еву&raquo;, &laquo;Сопрано&raquo;, &laquo;Декстер&raquo;, &laquo;Настоящий
+                детектив&raquo;, &laquo;Миллиарды&raquo;, &laquo;Силиконовая долина&raquo;&nbsp;&mdash; это лишь
+                малая часть библиотеки, в&nbsp;которую входят хиты лучших зарубежных студий.
+              </p>
+            </div>
+            <div class="main__form">
+              <div class="text-field-container">
+                <div
+                  class=" main-text-field mdc-text-field text-field  mdc-text-field--outlined mdc-text-field--no-label">
+                  <input  type="text" class="main__phone-number-input mdc-text-field__input"
+                    aria-label="Text field aria label" aria-describedby="text-field-outlined-no-label-2-helper-text">
+                  <div class="mdc-notched-outline mdc-notched-outline--no-label">
+                    <div class="mdc-notched-outline__leading"></div>
+                    <div class="mdc-notched-outline__trailing"></div>
+                  </div>
                 </div>
-                <div class="main__extra-block">
-                    <p>*первый месяц бесплатно</p>
+                <div class="mdc-text-field-helper-line">
+                  <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg"
+                    id="text-field-outlined-no-label-2-helper-text">Введи свой номер life:)</p>
                 </div>
-            </main>
-
-
-            <footer class="footer container">
-                <div class="footer__best">
-                    <p class="text16-19">&copy;&nbsp;ЗАО &laquo;БеСТ&raquo; 2004&ndash;2020</p>
-                </div>
-                <div class="footer__support">
-                    <p class="text16-19">Поддержка пользователей <span>909</span> или <span>+375 (25) 909-09-09</span>
-                    </p>
-                </div>
-                <div class="footer__rules">
-                    <a href="">
-                        <p class="text16-19">Правила пользования</p>
-                    </a>
-                </div>
-            </footer>
-
+              </div>
+              <button class="main__phone-number-button mdc-button mdc-button--unelevated">
+                <span class="mdc-button__ripple"></span> ПОДКЛЮЧИТЬ
+              </button>
+            </div>
+            <div class="main__extra-block">
+              <p>*первый месяц бесплатно</p>
+            </div>
+          </main>
         </div>
+      </div>
+
+
+      <footer class="footer container">
+        <div class="footer__best">
+          <p class="text16-19">&copy;&nbsp;ЗАО &laquo;БеСТ&raquo; 2004&ndash;2020</p>
+        </div>
+        <div class="footer__support">
+          <p class="text16-19">Поддержка пользователей <a href="tel:909">909</a> или <a href="tel:+375259090909">+375
+              (25) 909-09-09</a>
+          </p>
+        </div>
+        <div class="footer__rules">
+          <a href="">
+            <p class="text16-19">Правила пользования</p>
+          </a>
+        </div>
+      </footer>
 
     </div>
-    <div class="mdc-dialog active-service-dialog">
-        <div class="mdc-dialog__container">
-            <div class="mdc-dialog__surface" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title"
-                aria-describedby="my-dialog-content">
-                <div class="mdc-dialog__content" id="my-dialog-content">
-                    <div class="dialog__top">
-                        <p class="dialog__title">Активация пакета</p>
-                        <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="cancel">
-                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M21.5 2.615L19.385 0.5L11 8.885L2.615 0.5L0.5 2.615L8.885 11L0.5 19.385L2.615 21.5L11 13.115L19.385 21.5L21.5 19.385L13.115 11L21.5 2.615Z"
-                                    fill="white" />
-                            </svg>
-                        </button>
-                    </div>
-                    <p class="dialog__main-text">
-                        Продолжая, Вы&nbsp;соглашаетесь с&nbsp;тем, что Вам будет подключен пакет Амедиатека бесплатно*
-                        на&nbsp;абонентский номер <span class="dialog__user-phone-number"> </span>. Воспользоваться услугой, а&nbsp;так&nbsp;же
-                        отменить подписку&nbsp;Вы можете в&nbsp;сервисе TV+&nbsp;Беларусь через сайт https://tvplus.by
-                        или официальные приложения для Android и&nbsp;iOS
-                    </p>
 
-                    <p class="dialog__aside-text">
-                        *первый месяц, далее 0.47&nbsp;руб/сутки
-                    </p>
-                </div>
-                <div class="dialog__checkbox">
-                    <div class="mdc-checkbox active-service-checkbox">
-                        <input type="checkbox" color='secondary'
-                            class="mdc-checkbox__native-control" id="checkbox-1" />
-                        <div class="mdc-checkbox__background">
-                            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                <path class="mdc-checkbox__checkmark-path" fill="none"
-                                    d="M1.73,12.91 8.1,19.28 22.79,4.59" />
-                            </svg>
-                            <div class="mdc-checkbox__mixedmark"></div>
-                        </div>
-                        <div class="mdc-checkbox__ripple"></div>
-                    </div>
-                    <label for="checkbox-1">
-                        <p class="checkbox__text">С условиями использования сервиса согласен</p>
-                    </label>
-                </div>
-                <div class="mdc-dialog__actions">
-                    <button class="active-service-button mdc-button mdc-button--unelevated disabled" disabled>
-                        <span class="mdc-button__ripple" ></span> ПОДКЛЮЧИТЬ
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="mdc-dialog__scrim"></div>
-    </div>
+  </div>
+  <div class="mdc-dialog active-service-dialog">
+    <div class="mdc-dialog__container">
+      <div class="mdc-dialog__surface" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title"
+        aria-describedby="my-dialog-content">
+        <div class="mdc-dialog__content" id="my-dialog-content">
+          <div class="dialog__top">
+            <p class="dialog__title">Активация пакета</p>
+            <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="cancel">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21.5 2.615L19.385 0.5L11 8.885L2.615 0.5L0.5 2.615L8.885 11L0.5 19.385L2.615 21.5L11 13.115L19.385 21.5L21.5 19.385L13.115 11L21.5 2.615Z"
+                  fill="white" />
+              </svg>
+            </button>
+          </div>
+          <div class='content__active-service'>
+            <p class="dialog__main-text ">
+              Продолжая, Вы&nbsp;соглашаетесь с&nbsp;тем, что Вам будет подключен пакет Амедиатека бесплатно*
+              на&nbsp;абонентский номер <span class="dialog__user-phone-number"> </span>. Воспользоваться
+              услугой, а&nbsp;так&nbsp;же
+              отменить подписку&nbsp;Вы можете в&nbsp;сервисе TV+&nbsp;Беларусь через сайт https://tvplus.by
+              или официальные приложения для Android и&nbsp;iOS
+            </p>
 
-    <div class="container mdc-snackbar snackbar-no-number">
-        <div class="mdc-snackbar__surface" role="status" aria-relevant="additions">
-            <div class="mdc-snackbar__label" aria-atomic="false">
-                Введи свой номер телефона life:)
-            </div>
-            <div class="mdc-snackbar__actions" aria-atomic="true">
-                <div class="mdc-button mdc-snackbar__action">
-                    <svg class="mdc-button__label" width="21" height="21" viewBox="0 0 22 22" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M21.5 2.615L19.385 0.5L11 8.885L2.615 0.5L0.5 2.615L8.885 11L0.5 19.385L2.615 21.5L11 13.115L19.385 21.5L21.5 19.385L13.115 11L21.5 2.615Z"
-                            fill="white" />
-                    </svg>
+
+            <p class="dialog__aside-text">
+              *первый месяц, далее 0.47&nbsp;руб/сутки
+            </p>
+            <div class="dialog__checkbox">
+              <div class="mdc-checkbox active-service-checkbox">
+                <input type="checkbox"  class="mdc-checkbox__native-control" id="checkbox-1" />
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
                 </div>
+                <div class="mdc-checkbox__ripple"></div>
+              </div>
+              <label for="checkbox-1">
+                <p class="checkbox__text">С условиями использования сервиса согласен</p>
+              </label>
             </div>
+          </div>
+          <div class='content__add-code'>
+            <p class="dialog__main-text">
+              На&nbsp;Ваш номер отправлено SMS сообщение с&nbsp;кодом подтверждения активации пакета. Введите
+              код в&nbsp;форму ниже и&nbsp;нажмите &laquo;Подтвердить&raquo;
+            </p>
+            <form class="main__code-form" name="one-time-code" action="#">
+              <fieldset>
+                <label for="code-number-1">Num 1</label>
+                <label for="code-number-2">Num 2</label>
+                <label for="code-number-3">Num 3</label>
+                <label for="code-number-4">Num 4</label>
+                <label for="code-number-5">Num 5</label>
+                <label for="code-number-6">Num 6</label>
+                <div>
+                  <input class="main__code-number" type="number" pattern="[0-9]*" value="" inputtype="numeric"
+                    autocomplete="one-time-code" id="code-number-1" required>
+                  <input class="main__code-number" type="number" pattern="[0-9]*" maxlength="1" value=""
+                    inputtype="numeric" id="code-number-2" required>
+                  <input class="main__code-number" type="number" pattern="[0-9]*" maxlength="1" value=""
+                    inputtype="numeric" id="code-number-3" required>
+                  <input class="main__code-number" type="number" pattern="[0-9]*" maxlength="1" value=""
+                    inputtype="numeric" id="code-number-4" required>
+                  <input class="main__code-number" type="number" pattern="[0-9]*" maxlength="1" value=""
+                    inputtype="numeric" id="code-number-5" required>
+                  <input class="main__code-number" type="number" pattern="[0-9]*" maxlength="1" value=""
+                    inputtype="numeric" id="code-number-6" required>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <div class="mdc-dialog__actions">
+            <button class="active-service-button mdc-button mdc-button--unelevated disabled" disabled>
+              <span class="mdc-button__ripple"></span> ПОДКЛЮЧИТЬ
+            </button>
+          </div>
         </div>
+      </div>
     </div>
+    <div class="mdc-dialog__scrim"></div>
+  </div>
+
+  <div class="container mdc-snackbar snackbar-no-number">
+    <div class="mdc-snackbar__surface" role="status" aria-relevant="additions">
+      <div class="mdc-snackbar__label" aria-atomic="false">
+        Введи свой номер телефона life:)
+      </div>
+      <div class="mdc-snackbar__actions" aria-atomic="true">
+        <div class="mdc-button mdc-snackbar__action">
+          <svg class="mdc-button__label" width="21" height="21" viewBox="0 0 22 22" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M21.5 2.615L19.385 0.5L11 8.885L2.615 0.5L0.5 2.615L8.885 11L0.5 19.385L2.615 21.5L11 13.115L19.385 21.5L21.5 19.385L13.115 11L21.5 2.615Z"
+              fill="white" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
