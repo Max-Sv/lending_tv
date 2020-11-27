@@ -59,8 +59,14 @@ $base-font: Roboto, sans-serif;
         color: #a5a5a5 !important;
     }
 }
-.mdc-checkbox__native-control {
-    background-color: red;
+.mdc-checkbox__background {
+
+    top: 8px !important;
+    left: 8px !important;
+    width: 24px;
+    height: 24px;
+    border: 1px solid currentColor;
+    border-radius: 4px;
 }
 .mdc-checkbox .mdc-checkbox__native-control:enabled:checked ~ .mdc-checkbox__background, .mdc-checkbox .mdc-checkbox__native-control:enabled:indeterminate ~ .mdc-checkbox__background, .mdc-checkbox .mdc-checkbox__native-control[data-indeterminate=true]:enabled ~ .mdc-checkbox__background {
     background-color: initial;
@@ -68,6 +74,12 @@ $base-font: Roboto, sans-serif;
 }
 .mdc-checkbox .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate):not([data-indeterminate=true]) ~ .mdc-checkbox__background {
     border-color: #fff;
+}
+.mdc-checkbox.mdc-checkbox--selected .mdc-checkbox__ripple::before, .mdc-checkbox.mdc-checkbox--selected .mdc-checkbox__ripple::after {
+    background-color:  #fff;
+}
+.mdc-checkbox .mdc-checkbox__native-control:checked ~ .mdc-checkbox__background::before, .mdc-checkbox .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__background::before, .mdc-checkbox .mdc-checkbox__native-control[data-indeterminate=true] ~ .mdc-checkbox__background::before {
+    background-color: #fff;
 }
 .bg-main,
 .bg-gragient {
@@ -327,6 +339,7 @@ a {
     input.main__code-number {
         width: 54px;
         height: 62px;
+        border: none;
         line-height: 1;
         margin: 0.1em 10px;
         padding: 8px 0 4px;
@@ -553,5 +566,75 @@ a {
         background-image: url('../asset/amedia_poster_mob.jpg');
         background-repeat: no-repeat;
         background-size: 100% auto ;
+    }
+    .mdc-dialog .mdc-dialog__surface {
+        width: 90%;
+        max-width: 630px;
+        height: auto;
+        border-radius: 8px;
+        background-color: #1d1f23;
+    }
+    .mdc-dialog .dialog__title {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .mdc-dialog .dialog__main-text {
+        font-size: 10px;
+        line-height: 16px;
+        margin-bottom: 13px;
+    }
+    .mdc-dialog .dialog__aside-text {
+        margin-bottom: 19px;
+        font-size: 10px;
+        line-height: 11px;
+    }
+    .mdc-dialog .dialog__checkbox .checkbox__text {
+        margin-left: 3px;
+        font-size: 11px;
+
+    }
+    .mdc-dialog__button {
+        svg {
+            width: 12px;
+            height: 12px;
+        }
+    }
+    .mdc-dialog__button {
+        width: 14px;
+        height: 14px;
+    }
+    .mdc-dialog .mdc-dialog__content {
+        margin: 20px;
+    }
+    .mdc-dialog .mdc-dialog__content .dialog__top {
+        margin-bottom: 19px;
+    }
+    .mdc-dialog .dialog__checkbox {
+        margin-bottom: 5px; 
+    }
+    .mdc-checkbox__background {
+        top: 14px !important;
+        left: 14px !important;
+        width: 12px;
+        height: 12px;
+        border-radius: 2px;
+    }
+    .mdc-checkbox.mdc-checkbox--selected .mdc-checkbox__ripple::before, .mdc-checkbox.mdc-checkbox--selected .mdc-checkbox__ripple::after {
+        width: 15px;
+        height: 15px;
+        left: 12px;
+        top: 12px;
+    }
+    .main__code-form input.main__code-number {
+        width: 30px;
+        height: 40px;
+        margin: 0.1em 5px;
+        padding: 2px 0 ;
+        font-size: 25px;
+        line-height: 29px;
+        border-radius: 3px;
+    }
+    .main__code-form {
+        margin: 15px auto 25px;
     }
 }

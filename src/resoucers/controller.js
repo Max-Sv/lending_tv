@@ -6,7 +6,7 @@ export default  class Controller {
         this.view.bindSetAgreementState(this.handleCheckAgreementState.bind(this));
         this.view.bindActionWithCode(this.handleSendCode.bind(this), this.handleVerifyCode.bind(this));
         this.model.bindShowActiveServiceDialog(this.onShowActiveServiceDialog.bind(this));
-        this.model.bindShowSnackbarNoNumber(this.onShowSnackbarNoNumber.bind(this));
+        this.model.bindShowSnackbar(this.onShowSnackbar.bind(this));
         this.model.bindActiveButton(this.onActiveButton.bind(this));
     }
 
@@ -16,8 +16,8 @@ export default  class Controller {
     onActiveButton (state)  {
         this.view.activeButton(state)
     } 
-    onShowSnackbarNoNumber ()  {
-        this.view.showSnackbarNoNumber()
+    onShowSnackbar (label)  {
+        this.view.showSnackbar(label)
     } 
     handleAddPhoneNumber (phone ){
         this.model.addPhoneNumber(phone);
@@ -29,8 +29,7 @@ export default  class Controller {
         this.model.sendCode();
     }
     handleVerifyCode (code){
-        console.log('code:', code)
-        return this.model.verifyCode(code);
+        this.model.verifyCode(code);
     }
 
 }

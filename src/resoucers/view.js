@@ -24,7 +24,7 @@ export default class View {
             this.activeServiceCheckbox
         );
         this.activeServiceButton = this.getElement(".active-service-button");
-        this.snackbarNoNumber = new MDCSnackbar(this.getElement(".snackbar-no-number"));
+        this.snackbar = new MDCSnackbar(this.getElement(".snackbar-no-number"));
         this.setPhoneNumberMask();
         this.codeFirstInput = this.getElement('#code-number-1');
         this.codeInputs = document.querySelectorAll('.main__code-number');
@@ -113,7 +113,6 @@ export default class View {
         let input = new Inputmask( {
             mask: "+375 99 999 99 99",
             placeholder: "",
-            // showMaskOnFocus: false,
         });
         input.mask(this.phoneNumberInput);
     }
@@ -133,9 +132,7 @@ export default class View {
                 this._changeToCodeContent();
                 handlerSend();
             } else {
-                let result = handlerVerify(this.code);
-                console.log('result:', result)
-            }
+                handlerVerify(this.code);            }
         })
     }
     _changeToCodeContent() {
@@ -148,11 +145,12 @@ export default class View {
         this.showActiveServiceDialog()
         this._activeCodeInputLogic(this.codeFirstInput, this.codeInputs)
     }
-    showActiveServiceDialog(user) {
+    showActiveServiceDialog() {
         this.activeServiceDialog.open();
     }
-    showSnackbarNoNumber() {
-        this.snackbarNoNumber.open();
+    showSnackbar(label) {
+        this.snackbar.labelText = label;
+        this.snackbar.open();
     }
     activeButton(state) {
         this.agreementState = state;

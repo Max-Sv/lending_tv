@@ -6,12 +6,17 @@ export default  class Model {
             active: false,
             agreement: false
         }
+        this.snackBarLabel = {
+            wrongNumber: 'Введи свой номер телефона life:)',
+            wrongCode: 'Неверный код',
+            serviceActivated: 'Услуга подключена'
+        }
     }
     bindShowActiveServiceDialog(callback) {
         this.onShowActiveServiceDialog = callback
     }
-    bindShowSnackbarNoNumber(callback) {
-        this.onShowSnackbarNoNumber = callback
+    bindShowSnackbar(callback) {
+        this.onShowSnackbar = callback
     }
     bindActiveButton(callback) {
         this.onActiveButton = callback
@@ -22,7 +27,7 @@ export default  class Model {
             this.user.phone = number;
             this._showDialog(this.user);
         } else {
-            this._showSnackbar();
+            this._showSnackbar(this.snackBarLabel.wrongNumber);
         }
     }
     setAgreementState(state) {
@@ -35,8 +40,8 @@ export default  class Model {
     _showDialog(user) {
         this.onShowActiveServiceDialog(user)
     }
-    _showSnackbar() {
-        this.onShowSnackbarNoNumber()
+    _showSnackbar(label) {
+        this.onShowSnackbar(label)
     }
     sendCode() {
         const code = '123456';
@@ -46,7 +51,9 @@ export default  class Model {
         this.user.code = code;
     }
     verifyCode(code) {
-        return this.user.code === code;
+        let snackBarLabel;
+        snackBarLabel = this.user.code === code ? this.snackBarLabel.serviceActivated: this.snackBarLabel.wrongCode;
+        this._showSnackbar(snackBarLabel);
     }
     checkPhoneNumber(number) {
         if (number) {
