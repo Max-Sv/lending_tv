@@ -708,6 +708,7 @@ a {
         height: 68px;
         display: flex;
         justify-content: center;
+        width: 100vw;
     }
 
     .mdc-list-item .mdc-list-item__text {
@@ -720,7 +721,7 @@ a {
         color: rgba(255, 255, 255, 1);
     }
     .mdc-menu .mdc-list {
-        width: 100%;
+        width: 100vw;
     }
 
     .footer__support,
