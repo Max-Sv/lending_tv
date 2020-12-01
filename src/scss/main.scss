@@ -498,7 +498,7 @@ a {
     }
 
     .bg-gragient-mob {
-        // height: 110%;
+        height: 101%;
         background: rgb(0, 0, 0);
         background: linear-gradient(
             0deg,
@@ -568,7 +568,8 @@ a {
         }
         ul {
             padding: 0;
-            width: 100%;
+            width: 100vw;
+            left: 0;
             .mdc-list-item {
                 display: flex;
                 justify-self: center;
@@ -656,8 +657,14 @@ a {
     .mdc-snackbar .mdc-snackbar__surface {
         width: 327px;
         height: 46.02px;
+        justify-content: space-between;
+        .mdc-snackbar__actions {
+            width: 50px;
+        }
     }
-
+    .mdc-snackbar {
+        margin-bottom: 85px !important;
+    }
     .main .main__description-text {
         width: 106%;
         margin-bottom: 15px;
@@ -671,8 +678,9 @@ a {
     }
 
     .mdc-snackbar .mdc-snackbar__label {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 18px;
+        padding-right: 0;
     }
 
     .mdc-button.mdc-snackbar__action {
@@ -773,7 +781,7 @@ a {
     }
 
     .mdc-dialog .dialog__main-text {
-        font-size: 10px;
+        font-size: 9px;
         line-height: 16px;
         margin-bottom: 13px;
     }
@@ -786,7 +794,7 @@ a {
 
     .mdc-dialog .dialog__checkbox .checkbox__text {
         margin-left: 3px;
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .mdc-dialog__button {
@@ -799,10 +807,12 @@ a {
     .mdc-dialog__button {
         width: 14px;
         height: 14px;
+        min-width: 14px;
+        padding: 0;
     }
 
     .mdc-dialog .mdc-dialog__content {
-        margin: 20px;
+        margin: 20px 18px;
     }
 
     .mdc-dialog .mdc-dialog__content .dialog__top {
