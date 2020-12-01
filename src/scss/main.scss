@@ -559,11 +559,23 @@ a {
         width: 100vw;
         left: 0;
         right: 0;
+        .header__close {
+            margin-right: 20px;
+        }
+        .header__logo {
+            margin-left: 20px;
+        }
         ul {
             padding: 0;
             width: 100%;
             .mdc-list-item {
+                display: flex;
+                justify-self: center;
                 width: 100%;
+                a {
+                    text-align: center;
+                    width: 100%;
+                }
             }
         }
     }
