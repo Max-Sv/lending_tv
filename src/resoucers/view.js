@@ -1,9 +1,7 @@
 import { MDCDialog } from "@material/dialog";
 import { MDCSnackbar } from "@material/snackbar";
 import { MDCCheckbox } from "@material/checkbox";
-import {MDCTopAppBar} from '@material/top-app-bar';
 import {MDCMenu} from '@material/menu';
-import {MDCRipple} from '@material/ripple';
 import Inputmask from "inputmask";
 
 

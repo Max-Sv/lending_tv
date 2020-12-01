@@ -18,12 +18,12 @@
 @use "@material/menu/mdc-menu";
 
 @mixin mdc-text-field-outline-color($secondary) {
-
 }
+
 .bg-main {
-    background-image: url('../asset/amedia_poster.jpg');
+    background-image: url("../asset/amedia_poster.jpg");
     background-repeat: no-repeat;
-    background-size: cover ;
+    background-size: cover;
 }
 
 .main__form {
@@ -36,6 +36,7 @@
         margin-left: 153px;
     }
 }
+
 @include textfield.core-styles;
 @include icon-button.core-styles;
 @include button.core-styles;
@@ -43,6 +44,7 @@
 @include dialog.core-styles;
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,500,500italic,400italic,300italic,100italic,700italic);
 $base-font: Roboto, sans-serif;
+
 .main-text-field {
     @include mdc-text-field-outline-color(#fff);
     border-width: 0;
@@ -51,7 +53,8 @@ $base-font: Roboto, sans-serif;
     height: 56px;
     background: #ffffff;
     border-radius: 44px;
-    margin: 0 23px 3px 10px ;
+    margin: 0 23px 3px 10px;
+
     .mdc-text-field__input {
         caret-color: #a5a5a5;
         font-size: 22px;
@@ -59,8 +62,8 @@ $base-font: Roboto, sans-serif;
         color: #a5a5a5 !important;
     }
 }
-.mdc-checkbox__background {
 
+.mdc-checkbox__background {
     top: 8px !important;
     left: 8px !important;
     width: 24px;
@@ -68,29 +71,53 @@ $base-font: Roboto, sans-serif;
     border: 1px solid currentColor;
     border-radius: 4px;
 }
-.mdc-checkbox .mdc-checkbox__native-control:enabled:checked ~ .mdc-checkbox__background, .mdc-checkbox .mdc-checkbox__native-control:enabled:indeterminate ~ .mdc-checkbox__background, .mdc-checkbox .mdc-checkbox__native-control[data-indeterminate=true]:enabled ~ .mdc-checkbox__background {
+
+.mdc-checkbox
+    .mdc-checkbox__native-control:enabled:checked
+    ~ .mdc-checkbox__background,
+.mdc-checkbox
+    .mdc-checkbox__native-control:enabled:indeterminate
+    ~ .mdc-checkbox__background,
+.mdc-checkbox
+    .mdc-checkbox__native-control[data-indeterminate="true"]:enabled
+    ~ .mdc-checkbox__background {
     background-color: initial;
     border-color: #fff;
 }
-.mdc-checkbox .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate):not([data-indeterminate=true]) ~ .mdc-checkbox__background {
+
+.mdc-checkbox
+    .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate):not([data-indeterminate="true"])
+    ~ .mdc-checkbox__background {
     border-color: #fff;
 }
-.mdc-checkbox.mdc-checkbox--selected .mdc-checkbox__ripple::before, .mdc-checkbox.mdc-checkbox--selected .mdc-checkbox__ripple::after {
-    background-color:  #fff;
-}
-.mdc-checkbox .mdc-checkbox__native-control:checked ~ .mdc-checkbox__background::before, .mdc-checkbox .mdc-checkbox__native-control:indeterminate ~ .mdc-checkbox__background::before, .mdc-checkbox .mdc-checkbox__native-control[data-indeterminate=true] ~ .mdc-checkbox__background::before {
+
+.mdc-checkbox.mdc-checkbox--selected .mdc-checkbox__ripple::before,
+.mdc-checkbox.mdc-checkbox--selected .mdc-checkbox__ripple::after {
     background-color: #fff;
 }
+
+.mdc-checkbox
+    .mdc-checkbox__native-control:checked
+    ~ .mdc-checkbox__background::before,
+.mdc-checkbox
+    .mdc-checkbox__native-control:indeterminate
+    ~ .mdc-checkbox__background::before,
+.mdc-checkbox
+    .mdc-checkbox__native-control[data-indeterminate="true"]
+    ~ .mdc-checkbox__background::before {
+    background-color: #fff;
+}
+
 .bg-main,
 .bg-gragient {
     height: 100vh;
 }
+
 .bg-gragient {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-
 
 .mdc-button.mdc-button--unelevated {
     background-color: #feb52b;
@@ -122,17 +149,27 @@ $base-font: Roboto, sans-serif;
     border-radius: 8px;
     background-color: #1d1f23;
 }
+
+.mdc-dialog--open .mdc-dialog__scrim {
+    backdrop-filter: blur(5px);
+}
+
 .main__form .mdc-text-field-helper-text {
     font-family: $base-font !important;
-
 }
+
+a:-webkit-any-link:focus {
+    outline-offset: 0 !important;
+    outline: 0 !important;
+}
+
 .mdc-dialog {
     .content__active-service {
         display: flex;
         flex-direction: column;
         align-items: center;
-
     }
+
     p {
         font-family: $base-font;
     }
@@ -146,9 +183,10 @@ $base-font: Roboto, sans-serif;
     .mdc-dialog__actions {
         justify-content: center;
     }
+
     .dialog__main-text {
         font-size: 16px;
-        line-height: 27px;        
+        line-height: 27px;
         color: #ffffff;
         margin-bottom: 13px;
     }
@@ -198,6 +236,16 @@ $base-font: Roboto, sans-serif;
     }
 }
 
+.mdc-menu-surface--open + .menu__blure-bg {
+    left: 0;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    backdrop-filter: blur(1px);
+}
+
 .mdc-snackbar {
     justify-content: flex-start;
     margin-bottom: 95px !important;
@@ -215,9 +263,15 @@ $base-font: Roboto, sans-serif;
 }
 
 .bg-gragient {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.76234243697479) 57%,
+        rgba(0, 0, 0, 0.3897934173669467) 100%
+    );
+}
 
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.76234243697479) 57%, rgba(0,0,0,0.3897934173669467) 100%);}
 a {
     text-decoration: none;
 }
@@ -240,10 +294,12 @@ a {
     align-items: center;
     margin-bottom: 123px;
     justify-content: space-between;
+
     .header__pc-block {
         display: flex;
         align-items: center;
     }
+
     .header__mob-block {
         display: none;
     }
@@ -276,19 +332,20 @@ a {
     .main__description {
         margin: 0 8px 55px;
     }
+
     .main__description-text {
         width: 625px;
         margin-bottom: 26px;
     }
+
     p {
         color: #fff;
     }
 }
 
-
-
 .main__extra-block {
     margin-top: 55px;
+
     p {
         font-family: Roboto;
         font-style: normal;
@@ -365,7 +422,33 @@ a {
 
 .footer {
     display: flex;
+    flex-direction: column;
     margin-bottom: 45px !important;
+
+    .footer__mob-conten-text {
+        font-family: $base-font;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.03em;
+        color: #ffffff;
+    }
+
+    .footer__mob-content {
+        display: none;
+
+        img {
+            margin-bottom: 45px;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .footer__main-content {
+        display: flex;
+    }
+
     p {
         color: rgba(255, 255, 255, 0.4);
 
@@ -373,13 +456,24 @@ a {
             color: #fff;
         }
     }
+
     .footer__best {
         margin: 0 55px 0 0;
     }
+
     .footer__support {
         margin-right: 55px;
     }
+
+    .footer__rules {
+        a:hover {
+            p {
+                color: rgba(255, 255, 255, 1);
+            }
+        }
+    }
 }
+
 .container {
     margin: 0 auto;
     width: 1250px;
@@ -395,31 +489,43 @@ a {
     .container {
         width: 750px;
     }
-    .bg-gragient {
-        background: rgba(0,0,0,1);
-    }
-    .bg-gragient-mob {
 
-        background: rgb(0,0,0);
-        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 32%, rgba(0,0,0,0.76234243697479) 64%, rgba(0,0,0,0.44021358543417366) 100%);
-            }
+    .bg-gragient {
+        background: rgba(0, 0, 0, 1);
+    }
+
+    .bg-gragient-mob {
+        height: 110%;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 1) 32%,
+            rgba(0, 0, 0, 0.76234243697479) 64%,
+            rgba(0, 0, 0, 0.44021358543417366) 100%
+        );
+    }
+
     .main__title {
         svg {
             width: 100%;
         }
     }
+
     .main .main__description-text {
         width: 100%;
     }
+
     .bg-main {
         background-image: none;
+    }
 
-    }
     .bg-img-mob {
-        background-image: url('../asset/amedia_poster.jpg');
+        background-image: url("../asset/amedia_poster.jpg");
         background-repeat: no-repeat;
-        background-size: cover ;
+        background-size: cover;
     }
+
     .footer {
         .text16-19 {
             font-size: 13px;
@@ -428,49 +534,79 @@ a {
 }
 
 @media (max-width: 768px) {
+    body {
+        background-color: black;
+    }
+
+    .bg-main,
+    .bg-gragient {
+        min-height: 100vh;
+    }
+
+    .mdc-text-field-helper-text::before {
+        height: 10px;
+    }
+
     .mdc-menu.mdc-menu-surface.mdc-menu-surface--open {
         max-width: 100%;
         width: 100%;
-        background: #1D1F23;
+        background: #1d1f23;
         border-radius: 0;
+
         ul {
             padding: 0;
         }
     }
+
     .container {
         width: 85%;
     }
+
     .header__link {
         display: none;
     }
+
     .header__mob-block {
         display: block !important;
     }
+
     .header.container {
         padding: 12px 0;
         margin-bottom: 88px;
     }
+
     .main__title {
         margin: 0 0 10px 8px;
+
         svg {
             width: 305px;
         }
     }
+
     .main.container {
         width: 86%;
     }
+
+    .main__extra-block {
+        margin-top: 20px;
+        margin-bottom: 100px;
+    }
+
     .main__extra-block p {
         font-size: 22px;
         line-height: 26px;
         letter-spacing: 0.03em;
     }
+
     .main .main__description {
         margin: 0 0 35px;
     }
+
     .main__description-text.text22-26 {
         font-size: 12px;
         line-height: 14px;
-    } 
+    }
+
     .main-text-field {
         border-width: 0;
         border-style: solid;
@@ -479,10 +615,12 @@ a {
         border-radius: 24px;
         margin: 0 10px 3px 0;
     }
+
     .main-text-field .mdc-text-field__input {
         font-size: 12px;
         line-height: 14px;
     }
+
     .mdc-button.mdc-button--unelevated {
         width: 130px;
         height: 30px;
@@ -491,82 +629,113 @@ a {
         line-height: 14px;
         letter-spacing: 0.03em;
     }
+
     .mdc-snackbar .mdc-snackbar__surface {
         width: 327px;
         height: 46.02px;
     }
+
     .main .main__description-text {
         width: 106%;
         margin-bottom: 15px;
     }
+
     .main__form .mdc-text-field-helper-text {
         font-family: $base-font;
         font-size: 8px;
         line-height: 9px;
         margin-left: 67px;
-}
+    }
+
     .mdc-snackbar .mdc-snackbar__label {
         font-size: 16px;
         line-height: 18px;
     }
+
     .mdc-button.mdc-snackbar__action {
         svg {
             width: 15px;
             height: 15px;
         }
     }
-    .mdc-icon-button {
 
+    .mdc-icon-button {
         width: 48px;
         height: 48px;
         padding: 5px;
         left: 16px;
     }
-    .mdc-icon-button svg, .mdc-icon-button img {
+
+    .mdc-icon-button svg,
+    .mdc-icon-button img {
         width: 33px;
         height: 32px;
     }
+
     .mdc-list-item.item-top {
         display: flex;
         justify-content: space-between;
     }
+
     .mdc-list-item.item-middle {
         border-top: 1px solid rgba(255, 255, 255, 0.05);
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-
     }
+
     .mdc-list-item {
         height: 68px;
         display: flex;
         justify-content: center;
     }
+
     .mdc-list-item .mdc-list-item__text {
         line-height: 19px;
         letter-spacing: 0.03em;
         color: rgba(255, 255, 255, 0.5);
     }
+
     .mdc-list-item:hover .mdc-list-item__text {
         color: rgba(255, 255, 255, 1);
     }
-    .footer__support, .footer__rules {
+    .mdc-menu .mdc-list {
+        width: 100%;
+    }
+
+    .footer__support,
+    .footer__rules {
         display: none;
     }
+
     .footer .footer__best {
         margin: 0;
     }
+
     .footer {
-        justify-content: center;
         margin-bottom: 15px !important;
     }
+
     .footer__best .text16-19 {
         font-size: 12px;
         line-height: 14px;
+        margin-bottom: 15px;
     }
+
+    .footer__main-content {
+        justify-content: center;
+    }
+
+    .footer__mob-content {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .bg-img-mob {
-        background-image: url('../asset/amedia_poster_mob.jpg');
+        background-image: url("../asset/amedia_poster_mob.jpg");
         background-repeat: no-repeat;
-        background-size: 100% auto ;
+        background-size: 100% auto;
     }
+
     .mdc-dialog .mdc-dialog__surface {
         width: 90%;
         max-width: 630px;
@@ -574,44 +743,53 @@ a {
         border-radius: 8px;
         background-color: #1d1f23;
     }
+
     .mdc-dialog .dialog__title {
         font-size: 14px;
         line-height: 16px;
     }
+
     .mdc-dialog .dialog__main-text {
         font-size: 10px;
         line-height: 16px;
         margin-bottom: 13px;
     }
+
     .mdc-dialog .dialog__aside-text {
         margin-bottom: 19px;
         font-size: 10px;
         line-height: 11px;
     }
+
     .mdc-dialog .dialog__checkbox .checkbox__text {
         margin-left: 3px;
         font-size: 11px;
-
     }
+
     .mdc-dialog__button {
         svg {
             width: 12px;
             height: 12px;
         }
     }
+
     .mdc-dialog__button {
         width: 14px;
         height: 14px;
     }
+
     .mdc-dialog .mdc-dialog__content {
         margin: 20px;
     }
+
     .mdc-dialog .mdc-dialog__content .dialog__top {
         margin-bottom: 19px;
     }
+
     .mdc-dialog .dialog__checkbox {
-        margin-bottom: 5px; 
+        margin-bottom: 5px;
     }
+
     .mdc-checkbox__background {
         top: 14px !important;
         left: 14px !important;
@@ -619,21 +797,25 @@ a {
         height: 12px;
         border-radius: 2px;
     }
-    .mdc-checkbox.mdc-checkbox--selected .mdc-checkbox__ripple::before, .mdc-checkbox.mdc-checkbox--selected .mdc-checkbox__ripple::after {
+
+    .mdc-checkbox.mdc-checkbox--selected .mdc-checkbox__ripple::before,
+    .mdc-checkbox.mdc-checkbox--selected .mdc-checkbox__ripple::after {
         width: 15px;
         height: 15px;
         left: 12px;
         top: 12px;
     }
+
     .main__code-form input.main__code-number {
         width: 30px;
         height: 40px;
         margin: 0.1em 5px;
-        padding: 2px 0 ;
+        padding: 2px 0;
         font-size: 25px;
         line-height: 29px;
         border-radius: 3px;
     }
+
     .main__code-form {
         margin: 15px auto 25px;
     }
