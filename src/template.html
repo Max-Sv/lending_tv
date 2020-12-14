@@ -74,6 +74,7 @@
             </div>
   
           </header>
+
           <main class="main container">
             <div class="main__title">
               <svg width="746" height="71" viewBox="0 0 746 71" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -98,7 +99,7 @@
             <div class="main__form">
               <div class="text-field-container">
                 <div
-                  class=" main-text-field mdc-text-field text-field  mdc-text-field--outlined mdc-text-field--no-label">
+                  class="main-text-field mdc-text-field text-field  mdc-text-field--outlined mdc-text-field--no-label">
                   <input  type="text" class="main__phone-number-input mdc-text-field__input"
                     aria-label="Text field aria label" aria-describedby="text-field-outlined-no-label-2-helper-text">
                   <div class="mdc-notched-outline mdc-notched-outline--no-label">
@@ -112,7 +113,7 @@
                 </div>
               </div>
               <button class="main__phone-number-button mdc-button mdc-button--unelevated">
-                <span class="mdc-button__ripple"></span> ПОДКЛЮЧИТЬ
+                <div class="loader__phone lds-dual-ring"></div><span class="mdc-button__ripple"></span> ПОДКЛЮЧИТЬ
               </button>
             </div>
             <div class="main__extra-block">
@@ -121,7 +122,6 @@
           </main>
         </div>
       </div>
-
 
       <footer class="footer container">
         <div class="footer__mob-content">
@@ -227,7 +227,7 @@
           </div>
           <div class="mdc-dialog__actions">
             <button class="active-service-button mdc-button mdc-button--unelevated disabled" disabled>
-              <span class="mdc-button__ripple"></span> ПОДКЛЮЧИТЬ
+              <div class="loader__sms lds-dual-ring"></div><span class="mdc-button__ripple"></span> ПОДКЛЮЧИТЬ
             </button>
           </div>
         </div>

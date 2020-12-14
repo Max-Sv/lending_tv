@@ -8,6 +8,8 @@ export default  class Controller {
         this.model.bindShowActiveServiceDialog(this.onShowActiveServiceDialog.bind(this));
         this.model.bindShowSnackbar(this.onShowSnackbar.bind(this));
         this.model.bindActiveButton(this.onActiveButton.bind(this));
+        this.model.bindShowLoader(this.onShowLoader.bind(this));
+        this.model.bindOffShowLoader(this.offShowLoader.bind(this));
     }
 
     onShowActiveServiceDialog (user)  {
@@ -19,14 +21,20 @@ export default  class Controller {
     onShowSnackbar (label)  {
         this.view.showSnackbar(label)
     } 
+    onShowLoader (loader)  {
+        this.view.showLoader(loader)
+    } 
+    offShowLoader (loader)  {
+        this.view.offShowLoader(loader)
+    } 
     handleAddPhoneNumber (phone ){
         this.model.addPhoneNumber(phone);
     }
     handleCheckAgreementState (state ){
         this.model.setAgreementState(state);
     }
-    handleSendCode ( ){
-        this.model.sendCode();
+    handleSendCode (){
+        return this.model.sendCode();
     }
     handleVerifyCode (code){
         this.model.verifyCode(code);

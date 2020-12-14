@@ -1,8 +1,3 @@
-// @use "@material/theme"with ($primary: #fcb8ab,
-//     $secondary: #fff,
-//     $on-primary: #442b2d,
-//     $on-secondary: #442b2d,
-// );
 @use "@material/snackbar/mdc-snackbar";
 @use '@material/button';
 @use "@material/floating-label/mdc-floating-label";
@@ -36,7 +31,6 @@
         margin-left: 153px;
     }
 }
-
 @include textfield.core-styles;
 @include icon-button.core-styles;
 @include button.core-styles;
@@ -44,7 +38,14 @@
 @include dialog.core-styles;
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,500,500italic,400italic,300italic,100italic,700italic);
 $base-font: Roboto, sans-serif;
-
+body {
+    background: rgb(0, 0, 0);
+}
+.linear-progress {
+    // @include buffer-color($color);
+    color: red;
+    background-color: red;
+}
 .main-text-field {
     @include mdc-text-field-outline-color(#fff);
     border-width: 0;
@@ -141,6 +142,32 @@ $base-font: Roboto, sans-serif;
 .mdc-notched-outline {
     display: none;
 }
+.lds-dual-ring {
+    display: none;
+    width: 44px;
+    height: 44px;
+    position: relative;
+    left: -10px;
+}
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 4px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 .mdc-dialog .mdc-dialog__surface {
     max-width: none;
@@ -153,7 +180,6 @@ $base-font: Roboto, sans-serif;
 .mdc-dialog--open .mdc-dialog__scrim {
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
-
 }
 
 .main__form .mdc-text-field-helper-text {
@@ -733,7 +759,7 @@ a {
         width: 100vw;
     }
 
-    .footer__main-content{
+    .footer__main-content {
         display: none !important;
     }
 
@@ -851,5 +877,14 @@ a {
 
     .main__code-form {
         margin: 15px auto 25px;
+    }
+    .lds-dual-ring {
+        width: 25px;
+        height: 34px;
+        left: -9px;
+    }
+    .lds-dual-ring:after {
+        width: 14px;
+        height: 14px;
     }
 }
