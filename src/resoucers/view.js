@@ -29,12 +29,15 @@ export default class View {
         this.activeServiceButton = this.getElement(".active-service-button");
         this.snackbar = new MDCSnackbar(this.getElement(".snackbar-no-number"));
         this.setPhoneNumberMask();
+        this.appLink = this.getElement(".app__store"); 
+        this.googleLink = this.getElement(".google__store"); 
         this.codeFirstInput = this.getElement("#code-number-1");
         this.codeInputs = document.querySelectorAll(".main__code-number");
         this.menuButton = this.getElement(".menu-button");
         this.menu = new MDCMenu(this.getElement(".mdc-menu"));
         this.menuSurface = new MDCMenuSurface(document.querySelector('.mdc-menu-surface'));
         this.listenMenu();
+        this._runMetric();
     }
 
     listenMenu() {
@@ -111,6 +114,14 @@ export default class View {
         });
         firstInput.addEventListener("input", splitNumber);
     }
+    _runMetric() {
+        this.appLink.addEventListener('click', e => {
+            ym(70547467,'reachGoal','App_Store');
+        })
+        this.googleLink.addEventListener('click', e => {
+            ym(70547467,'reachGoal','Google_Ply');
+        })
+    }
     getElement(selector) {
         const element = document.querySelector(selector);
         return element;
@@ -143,6 +154,7 @@ export default class View {
     bindAddPhoneNumber(handler) {
         this.phoneNumberButton.addEventListener("click", (event) => {
             handler(this._phoneNumber);
+            ym(70547467,'reachGoal','najali_podklyuchit')
         });
     }
     bindActionWithCode(handlerSend, handlerVerify) {

@@ -43,12 +43,12 @@ export default  class Model {
             let isCorrectNumber = this.checkPhoneNumber(number);
             if (isCorrectNumber) {
                 this._showLoader('loaderPhone')
-                const request = await apiCheckNumber();
+                const request = await apiCheckNumber(number);
                 console.log('request apiCheckNumber:', request)
                 this.offShowLoader('loaderPhone')
                 const {code, detail} = request;
                 if (code) {
-                    if ( code !== "OK") {
+                    if ( code === "OK") {
                         this.user.phone = number;
                         this._showDialog(this.user);
                     } else {
@@ -121,6 +121,7 @@ export default  class Model {
                     if (code === "OK") {
                         this.user.active = true;
                         this._showSnackbar(this.snackBarLabel.serviceActivated);
+                        ym(70547467,'reachGoal','Podklyuchili_podpisku');
                     } else {
                         this._showSnackbar(detail);
                     }

@@ -197,6 +197,11 @@ a:-webkit-any-link:focus {
         flex-direction: column;
         align-items: center;
     }
+    a.dialog__main-text {
+            &:hover {
+                text-decoration: underline;
+            }
+    }
 
     p {
         font-family: $base-font;
@@ -260,6 +265,9 @@ a:-webkit-any-link:focus {
             font-size: 18px;
             line-height: 21px;
             color: rgba(255, 255, 255, 0.5);
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
@@ -453,7 +461,10 @@ a {
     display: flex;
     flex-direction: column;
     margin-bottom: 45px !important;
-
+    .footer__stores {
+        display: flex;
+        align-items: center;
+    }
     .footer__mob-conten-text {
         font-family: $base-font;
         font-size: 12px;
@@ -467,9 +478,14 @@ a {
 
         img {
             margin-bottom: 45px;
-
+            height: 50px;
             &:hover {
                 opacity: 0.8;
+            }
+        }
+        .app__store {
+            img {
+                height: 35px;
             }
         }
     }

@@ -85,16 +85,18 @@
             </div>
             <div class="main__description">
               <p class="main__description-text text22-26">
-                Амедиатека&nbsp;&mdash; это премьеры лучших сериалов планеты одновременно со&nbsp;всем миром.
-                Вас ждут новые проекты и&nbsp;вся библиотека HBO, хиты ведущих телеканалов и&nbsp;студий мира
-                (FOX, Showtime, Starz, BBC, ABC Studios, Sony Pictures) и&nbsp;новые российские сериалы.
+                Проведём зимние вечера вместе.<br>
+                Лучшие сериалы планеты, хиты ведущих телеканалов и&nbsp;студий ― &laquo;Хороший доктор&raquo;, &laquo;Игра престолов&raquo;, &laquo;Викинги&raquo;, &laquo;Секс в&nbsp;большом городе&raquo;, &laquo;Твин Пикс&raquo; и&nbsp;многое другое! Огромный каталог в&nbsp;твоём смартфоне, планшете, ноутбуке и&nbsp;телевизоре.
               </p>
               <p class="main__description-text text22-26">
+                Первые 30&nbsp;дней бесплатно, далее&nbsp;&mdash; 10,50&nbsp;руб/мес.
+              </p>
+              <!-- <p class="main__description-text text22-26">
                 &laquo;Хороший доктор&raquo;, &laquo;Анатомия страсти&raquo;, &laquo;Игра престолов&raquo;,
                 &laquo;Убивая Еву&raquo;, &laquo;Сопрано&raquo;, &laquo;Декстер&raquo;, &laquo;Настоящий
                 детектив&raquo;, &laquo;Миллиарды&raquo;, &laquo;Силиконовая долина&raquo;&nbsp;&mdash; это лишь
                 малая часть библиотеки, в&nbsp;которую входят хиты лучших зарубежных студий.
-              </p>
+              </p> -->
             </div>
             <div class="main__form">
               <div class="text-field-container">
@@ -126,7 +128,10 @@
       <footer class="footer container">
         <div class="footer__mob-content">
           <p class='footer__mob-conten-text'>Смотри на своем устройстве прямо сейчас</p>
-          <a target="_blank" href="https://play.google.com/store/apps/details?id=life.com.by.tvplus"><img src="./src/asset/google-play.png" alt="google play"></a>
+          <div class="footer__stores">
+            <a class="app__store" target="_blank" href="https://apple.co/2VIwMJv"><img src="./src/asset/app_store.svg" alt="app store"></a>
+            <a class="google__store" target="_blank" href="https://play.google.com/store/apps/details?id=life.com.by.tvplus"><img src="./src/asset/google-play.png" alt="google play"></a>
+          </div>
           <div class="footer__best">
             <p class="text16-19">&copy;&nbsp;ЗАО &laquo;БеСТ&raquo; 2004&ndash;2020</p>
           </div>
@@ -168,16 +173,11 @@
           </div>
           <div class='content__active-service'>
             <p class="dialog__main-text ">
-              Продолжая, Вы&nbsp;соглашаетесь с&nbsp;тем, что Вам будет подключен пакет Амедиатека бесплатно*
-              на&nbsp;абонентский номер <span class="dialog__user-phone-number"> </span>. Воспользоваться
-              услугой, а&nbsp;так&nbsp;же
-              отменить подписку&nbsp;Вы можете в&nbsp;сервисе TV+&nbsp;Беларусь через сайт https://tvplus.by
-              или официальные приложения для Android и&nbsp;iOS
+              Пакет Амедиатека будет подключён бесплатно* на номер <span class="dialog__user-phone-number"> </span>. 
+              Воспользоваться услугой/отменить подписку можно на сайте сервиса TV+ Беларусь <a   class="dialog__main-text " href="https://tvplus.by/" target='_blank'>https://tvplus.by/</a> или в официальных приложениях для Android и iOS.
             </p>
-
-
             <p class="dialog__aside-text">
-              *первый месяц, далее 0.47&nbsp;руб/сутки
+              *на месяц при первом подключении, далее – 10,50 руб/мес
             </p>
             <div class="dialog__checkbox">
               <div class="mdc-checkbox active-service-checkbox">
@@ -191,7 +191,7 @@
                 <div class="mdc-checkbox__ripple"></div>
               </div>
               <label for="checkbox-1">
-                <p class="checkbox__text">С условиями использования сервиса согласен</p>
+                <a class="checkbox__text" href="https://life.com.by/media/Documents/VAS/Poryadok_TV_plus_-ot-26.11.2020.pdf" target='_blank'>С условиями использования сервиса согласен</a>
               </label>
             </div>
           </div>
@@ -253,6 +253,7 @@
       </div>
     </div>
   </div>
+  <noscript><div><img src="https://mc.yandex.ru/watch/70547467" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <script src="main.bundle.js"></script></body>
 
 </html>
