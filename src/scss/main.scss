@@ -466,6 +466,12 @@ a {
         align-items: center;
         margin-bottom: 20px;
         height: 55px;
+        a {
+            height: 55px;
+            display: block;
+            display: flex;
+            align-items: center;
+        }
     }
     .footer__mob-conten-text {
         font-family: $base-font;
