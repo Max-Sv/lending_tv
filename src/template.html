@@ -236,6 +236,38 @@
     <div class="mdc-dialog__scrim"></div>
   </div>
 
+  <div class="mdc-dialog active-not-number">
+    <div class="mdc-dialog__container">
+      <div class="mdc-dialog__surface" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title"
+        aria-describedby="my-dialog-content">
+        <div class="mdc-dialog__content" id="my-dialog-content">
+          <div class="dialog__top">
+            <p class="dialog__title">Добро пожаловать!</p>
+            <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="cancel">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21.5 2.615L19.385 0.5L11 8.885L2.615 0.5L0.5 2.615L8.885 11L0.5 19.385L2.615 21.5L11 13.115L19.385 21.5L21.5 19.385L13.115 11L21.5 2.615Z"
+                  fill="white" />
+              </svg>
+            </button>
+          </div>
+          <div class='content__active-service'>
+            <p class="dialog__main-text ">
+              Пакет Амедиатека будет подключён бесплатно* на номер <span class="dialog__user-phone-number"> </span>. 
+              Воспользоваться услугой/отменить подписку можно на сайте сервиса TV+ Беларусь <a   class="dialog__main-text " href="https://tvplus.by/" target='_blank'>https://tvplus.by/</a> или в официальных приложениях для Android и iOS.
+            </p>
+          </div>
+          <div class="mdc-dialog__actions">
+            <button class="active-service-button mdc-button mdc-button--unelevated">
+              <div class="loader__sms lds-dual-ring"></div><span class="mdc-button__ripple"></span> ПЕРЕЙТИ НА САЙТ
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mdc-dialog__scrim"></div>
+  </div>
+
   <div class="container mdc-snackbar snackbar-no-number">
     <div class="mdc-snackbar__surface" role="status" aria-relevant="additions">
       <div class="mdc-snackbar__label" aria-atomic="false">

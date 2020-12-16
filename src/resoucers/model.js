@@ -26,6 +26,9 @@ export default  class Model {
     bindShowActiveServiceDialog(callback) {
         this.onShowActiveServiceDialog = callback
     }
+    bindShowActiveNoNumber(callback) {
+        this.onShowActiveNoNumber = callback
+    }
     bindShowSnackbar(callback) {
         this.onShowSnackbar = callback
     }
@@ -39,7 +42,7 @@ export default  class Model {
         this.offShowLoader = callback;
     }
     async addPhoneNumber(number) {
-        try {
+        try {this.onShowActiveNoNumber
             let isCorrectNumber = this.checkPhoneNumber(number);
             if (isCorrectNumber) {
                 this._showLoader('loaderPhone')
@@ -53,6 +56,7 @@ export default  class Model {
                         this._showDialog(this.user);
                     } else {
                         this._showSnackbar(detail);
+                        // this.onShowActiveNoNumber();
                     }
                 } else {
                     throw Error;

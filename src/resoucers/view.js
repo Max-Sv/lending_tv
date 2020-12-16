@@ -19,6 +19,9 @@ export default class View {
         this.activeServiceDialog = new MDCDialog(
             this.getElement(".active-service-dialog")
         );
+        this.activeNoNumber = new MDCDialog(
+            this.getElement(".active-not-number")
+        );
         this.activeServiceCheckbox = this.getElement(
             ".active-service-checkbox"
         );
@@ -183,6 +186,9 @@ export default class View {
     }
     showActiveServiceDialog() {
         this.activeServiceDialog.open();
+    }
+    showActiveNoNumber() {
+        this.activeNoNumber.open();
     }
     showSnackbar(label) {
         this.snackbar.labelText = label;

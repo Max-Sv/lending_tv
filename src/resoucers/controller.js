@@ -6,6 +6,7 @@ export default  class Controller {
         this.view.bindSetAgreementState(this.handleCheckAgreementState.bind(this));
         this.view.bindActionWithCode(this.handleSendCode.bind(this), this.handleVerifyCode.bind(this));
         this.model.bindShowActiveServiceDialog(this.onShowActiveServiceDialog.bind(this));
+        this.model.bindShowActiveNoNumber(this.onShowActiveNoNumber.bind(this));
         this.model.bindShowSnackbar(this.onShowSnackbar.bind(this));
         this.model.bindActiveButton(this.onActiveButton.bind(this));
         this.model.bindShowLoader(this.onShowLoader.bind(this));
@@ -14,6 +15,9 @@ export default  class Controller {
 
     onShowActiveServiceDialog (user)  {
         this.view.showActiveServiceDialog(user)
+    } 
+    onShowActiveNoNumber ()  {
+        this.view.showActiveNoNumber()
     } 
     onActiveButton (state)  {
         this.view.activeButton(state)
