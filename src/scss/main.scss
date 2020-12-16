@@ -464,6 +464,7 @@ a {
     .footer__stores {
         display: flex;
         align-items: center;
+        margin-bottom: 20px;
     }
     .footer__mob-conten-text {
         font-family: $base-font;
@@ -477,7 +478,6 @@ a {
         display: none;
 
         img {
-            margin-bottom: 45px;
             height: 50px;
             &:hover {
                 opacity: 0.8;
