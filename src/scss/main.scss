@@ -282,7 +282,23 @@ a:-webkit-any-link:focus {
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
 }
+.active-not-number {
+    .mdc-dialog .mdc-dialog__surface {
+        max-width: none;
+        width: 630px;
+        height: auto;
+        border-radius: 8px;
+        background-color: #1d1f23;
+    }
+    .mdc-button.mdc-button--unelevated {
+        margin-top: 30px;
+        width: 285px;
+    }
+    .content__active-service {
 
+        align-items: flex-start !important;
+    }
+}
 .mdc-snackbar {
     justify-content: flex-start;
     margin-bottom: 95px !important;
@@ -479,6 +495,7 @@ a {
         line-height: 14px;
         letter-spacing: 0.03em;
         color: #ffffff;
+        margin-bottom: 20px;
     }
 
     .footer__mob-content {

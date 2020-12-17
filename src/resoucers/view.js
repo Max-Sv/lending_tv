@@ -10,6 +10,7 @@ export default class View {
     constructor() {
         this.agreementState = false;
         this.phoneNumberSpan = this.getElement(".dialog__user-phone-number");
+        this.phoneNumberSpanNoNumber = this.getElement(".dialog__user-phone-no-number");
         this.phoneNumberInput = this.getElement(".main__phone-number-input");
         this.phoneNumberButton = this.getElement(".main__phone-number-button");
         this.contentActiveService = this.getElement(".content__active-service");
@@ -53,9 +54,8 @@ export default class View {
     _activeCodeInputLogic(firstInput, inputs) {
         setTimeout(() => {
             firstInput.focus();
-        }, 500);
+        }, 1000);
         const self = this;
-        console.log('firstInput:', firstInput)
         const popuNext = function (el, data) {
             el.value = data[0];
             data = data.substring(1);
@@ -164,7 +164,6 @@ export default class View {
         this.activeServiceButton.addEventListener("click", (event) => {
             if (this.agreementState) {
                 handlerSend().then(status => {
-                    console.log('status:', status)
                     if (status) {
                         this._changeToCodeContent();
                     }
@@ -188,6 +187,11 @@ export default class View {
         this.activeServiceDialog.open();
     }
     showActiveNoNumber() {
+        const { value } = this.phoneNumberInput;
+        console.log('value:', value)
+        if (value) {
+            this.phoneNumberSpanNoNumber.innerHTML = value;
+        }
         this.activeNoNumber.open();
     }
     showSnackbar(label) {

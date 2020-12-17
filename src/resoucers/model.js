@@ -56,7 +56,7 @@ export default  class Model {
                         this._showDialog(this.user);
                     } else {
                         this._showSnackbar(detail);
-                        // this.onShowActiveNoNumber();
+                        this.onShowActiveNoNumber();
                     }
                 } else {
                     throw Error;
@@ -89,7 +89,11 @@ export default  class Model {
         this.offShowLoader(loader)
     }
     randomInteger (pow) {
-        return Math.floor(Math.random() * pow);
+        let number = Math.floor(Math.random() * pow);
+        // if (number.length !== 6) {
+        //     this.randomInteger(pow);
+        // }
+        return number;
     };
     async sendCode() {
         try {
@@ -99,11 +103,16 @@ export default  class Model {
             console.log(randNum);
             this._addCode(randNum);
             const res = await apiSendCodeBySms(this.user.phone, this.user.code) 
-            this.offShowLoader('loaderSms')
-            console.log('res:', res) 
-            return res;
+            console.log('res:', res)
+            if (res.success) {
+                this.offShowLoader('loaderSms');
+                return res.success;
+            } else {
+                throw Error;
+            }
         } catch(err) {
             console.log('err:', err)
+            this.offShowLoader('loaderSms');
             this._showSnackbar(this.snackBarLabel.error);
         }
 
@@ -116,7 +125,7 @@ export default  class Model {
         try {
             this._showLoader('loaderSms');
             const codeIsTrue =  await apiVerifyCode(this.user.phone, code)
-            if (codeIsTrue) {
+            if (codeIsTrue.success === "OK") {
                 const request = await apiActiveServiceAmediateka(this.user.phone);
                 this.offShowLoader('loaderSms')
                 console.log('request apiActiveServiceAmediateka:', request)
@@ -133,9 +142,11 @@ export default  class Model {
                     throw Error;
                 }
             } else {
+                this.offShowLoader('loaderSms')
                 this._showSnackbar(this.snackBarLabel.wrongCode);
             }            
         } catch(err) {
+            this.offShowLoader('loaderSms')
             this._showSnackbar(this.snackBarLabel.error);
         }
 

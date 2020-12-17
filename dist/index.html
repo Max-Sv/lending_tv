@@ -127,10 +127,10 @@
 
       <footer class="footer container">
         <div class="footer__mob-content">
-          <p class='footer__mob-conten-text'>Смотри на своем устройстве прямо сейчас</p>
+          <div class="footer__mob-conten-text">Смотри на своем устройстве прямо сейчас</div>
           <div class="footer__stores">
-            <a class="app__store" target="_blank" href="https://apple.co/2VIwMJv"><img src="./src/asset/app_store.svg" alt="app store"></a>
-            <a class="google__store" target="_blank" href="https://play.google.com/store/apps/details?id=life.com.by.tvplus"><img src="./src/asset/google-play.png" alt="google play"></a>
+            <div><a class="app__store" target="_blank" href="https://apple.co/2VIwMJv"><img src="./src/asset/app_store.svg" alt="app store"></a></div>
+            <div><a class="google__store" target="_blank" href="https://play.google.com/store/apps/details?id=life.com.by.tvplus"><img src="./src/asset/google-play.png" alt="google play"></a></div>
           </div>
           <div class="footer__best">
             <p class="text16-19">&copy;&nbsp;ЗАО &laquo;БеСТ&raquo; 2004&ndash;2020</p>
@@ -251,16 +251,20 @@
               </svg>
             </button>
           </div>
-          <div class='content__active-service'>
+          <div class='content__active-service '>
+            <p class="dialog__main-text no-phone">
+              Введенный номер <span class="dialog__user-phone-no-number"> </span> не зарегистрирован в сервисе TV+ Беларусь.
+            </p>
             <p class="dialog__main-text ">
-              Пакет Амедиатека будет подключён бесплатно* на номер <span class="dialog__user-phone-number"> </span>. 
-              Воспользоваться услугой/отменить подписку можно на сайте сервиса TV+ Беларусь <a   class="dialog__main-text " href="https://tvplus.by/" target='_blank'>https://tvplus.by/</a> или в официальных приложениях для Android и iOS.
+              Перейдите на сайт, завершите регистрацию и активируйте пакет в личном кабинете. Там еще много интересного! 
             </p>
           </div>
           <div class="mdc-dialog__actions">
-            <button class="active-service-button mdc-button mdc-button--unelevated">
-              <div class="loader__sms lds-dual-ring"></div><span class="mdc-button__ripple"></span> ПЕРЕЙТИ НА САЙТ
-            </button>
+            <a href='https://tvplus.by/' target="_blank"> 
+              <button class="active-service-button mdc-button mdc-button--unelevated">
+                <div class="loader__sms lds-dual-ring"></div><span class="mdc-button__ripple"></span> ПЕРЕЙТИ НА САЙТ
+              </button>
+            </a>
           </div>
         </div>
       </div>

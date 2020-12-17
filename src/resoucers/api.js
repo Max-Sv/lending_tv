@@ -34,10 +34,9 @@ export const apiSendCodeBySms = async (number, code) => {
         "dest_number": number, 
         "message": `Ваш код ${code}`
     }
-    const dataForBack = {
-        "phone": number, 
-        "code": code
-    }
+    const fd = new FormData();
+    fd.append("phone", number);
+    fd.append("code", code);
     const responseSms = await fetch(API_SMS, {
         method: 'POST',
         headers: {
@@ -47,31 +46,25 @@ export const apiSendCodeBySms = async (number, code) => {
         body: JSON.stringify(dataSms)
         
     });
-    const response = await fetch('tz.php', {
-        method: 'POST',
-        body: JSON.stringify(dataForBack)
-    });
-
-    return await responseSms.json();
-    // return new Promise(res => {
-    //     setTimeout(() => {
-    //         res('dfas')
-    //     }, 2000);
-    // })
-}
-export const apiVerifyCode = async (number, code) => {
-
-    const dataForBack = {
-        "phone": number, 
-        "code": code
+    let response;
+    if(responseSms.ok) {
+        response = await fetch('tz.php', {
+            method: 'POST',
+            body: fd
+        });
     }
+    return await response.json();
+    }
+
+export const apiVerifyCode = async (number, code) => {
+    const fd = new FormData();
+    fd.append("phone", number);
+    fd.append("code", code);
+
     const response = await fetch('tz.php', {
         method: 'POST',
-        body: JSON.stringify(dataForBack)
+        body: fd
     });
-    // return new Promise(res => {
-    //     setTimeout(() => {
-    //         res(0)
-    //     }, 2000);
-    // })
+    return await response.json();
+
 }
