@@ -137,11 +137,7 @@ export default class View {
             return number.join("");
         }
     }
-    get _codeValue() {
-        this.inputs.forEach((input) =>
-            console.log("input.value:", input.value)
-        );
-    }
+
     setPhoneNumberMask() {
         let input = new Inputmask({
             mask: "+375 99 999 99 99",
@@ -188,7 +184,6 @@ export default class View {
     }
     showActiveNoNumber() {
         const { value } = this.phoneNumberInput;
-        console.log('value:', value)
         if (value) {
             this.phoneNumberSpanNoNumber.innerHTML = value;
         }
@@ -197,6 +192,7 @@ export default class View {
     showSnackbar(label) {
         this.snackbar.labelText = label;
         this.snackbar.open();
+        if (label === 'Услуга подключена') this.activeServiceDialog.close();
     }
     showLoader(loader) {
         this._setLoaderActive(this[loader])

@@ -4,7 +4,6 @@ const API_SMS = 'https://api.tvplus.by/api/admin/v2/notifications/smssend/'
 
 
 export const apiCheckNumber = async (number) => {
-    console.log('number:', number)
     const response = await fetch(`https://api.tvplus.by/api/admin/v2/profiles/services/?username=${number}`, {
         method: 'GET',
         headers: {
@@ -34,9 +33,6 @@ export const apiSendCodeBySms = async (number, code) => {
         "dest_number": number, 
         "message": `Ваш код ${code}`
     }
-    const fd = new FormData();
-    fd.append("phone", number);
-    fd.append("code", code);
     const responseSms = await fetch(API_SMS, {
         method: 'POST',
         headers: {
@@ -46,22 +42,26 @@ export const apiSendCodeBySms = async (number, code) => {
         body: JSON.stringify(dataSms)
         
     });
-    let response;
-    if(responseSms.ok) {
-        response = await fetch('tz.php', {
-            method: 'POST',
-            body: fd
-        });
+    return await responseSms;
     }
+export const apiSendCodeToBack = async (number, code) => {
+    const fd = new FormData();
+    fd.append("phone", number);
+    fd.append("code", code);
+    const response = await fetch('tz.php', {
+        method: 'POST',
+        body: fd
+    });
+    
     return await response.json();
     }
 
 export const apiVerifyCode = async (number, code) => {
     const fd = new FormData();
     fd.append("phone", number);
-    fd.append("code", code);
+    fd.append("code2", code);
 
-    const response = await fetch('tz.php', {
+    const response = await fetch('tz2.php', {
         method: 'POST',
         body: fd
     });

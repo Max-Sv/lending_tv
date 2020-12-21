@@ -1,4 +1,4 @@
-import {apiCheckNumber, apiActiveServiceAmediateka, apiSendCodeBySms, apiVerifyCode} from './api'
+import {apiCheckNumber, apiActiveServiceAmediateka, apiSendCodeBySms, apiVerifyCode, apiSendCodeToBack} from './api'
 
 export default  class Model {
     constructor() {
@@ -12,7 +12,7 @@ export default  class Model {
             wrongNumber: 'Введи свой номер телефона life:)',
             wrongCode: 'Неверный код',
             serviceActivated: 'Услуга подключена',
-            error: 'Что-то пошло не так, попробуте позже',
+            error: 'Что-то пошло не так, попробуйте позже',
             wrongUser: 'Пользователь не найден!'
         }
         this.loader = {
@@ -47,7 +47,6 @@ export default  class Model {
             if (isCorrectNumber) {
                 this._showLoader('loaderPhone')
                 const request = await apiCheckNumber(number);
-                console.log('request apiCheckNumber:', request)
                 this.offShowLoader('loaderPhone')
                 const {code, detail} = request;
                 if (code) {
@@ -90,9 +89,9 @@ export default  class Model {
     }
     randomInteger (pow) {
         let number = Math.floor(Math.random() * pow);
-        // if (number.length !== 6) {
-        //     this.randomInteger(pow);
-        // }
+        while (number.toString().length !== 6) {
+            number = Math.floor(Math.random() * pow);
+        }
         return number;
     };
     async sendCode() {
@@ -100,13 +99,17 @@ export default  class Model {
             this._showLoader('loaderSms')
             const pow = 1000000;
             let randNum = this.randomInteger(pow);
-            console.log(randNum);
             this._addCode(randNum);
-            const res = await apiSendCodeBySms(this.user.phone, this.user.code) 
-            console.log('res:', res)
+    
+            const res = await apiSendCodeToBack(this.user.phone, this.user.code) 
             if (res.success) {
-                this.offShowLoader('loaderSms');
-                return res.success;
+                const resSms = await apiSendCodeBySms(this.user.phone, this.user.code) 
+                if (resSms.ok) {
+                    this.offShowLoader('loaderSms');
+                    return resSms.ok
+                } else {
+                    throw Error;
+                }
             } else {
                 throw Error;
             }
@@ -125,10 +128,9 @@ export default  class Model {
         try {
             this._showLoader('loaderSms');
             const codeIsTrue =  await apiVerifyCode(this.user.phone, code)
-            if (codeIsTrue.success === "OK") {
+            if (codeIsTrue.success) {
                 const request = await apiActiveServiceAmediateka(this.user.phone);
                 this.offShowLoader('loaderSms')
-                console.log('request apiActiveServiceAmediateka:', request)
                 const {code, detail} = request;
                 if (code) {
                     if (code === "OK") {
