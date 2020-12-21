@@ -140,15 +140,16 @@ export default class View {
 				.getAllResponseHeaders()
 				.split("\u000d\u000a")
 				.forEach((line) => {
+					console.log('line:', line)
 					if (line.length > 0) {
 						let delimiter = "\u003a\u0020",
 							header = line.split(delimiter);
-	
 						headers[header.shift().toLowerCase()] = header.join(delimiter);
 					}
 				});
 					console.log("headers:", headers);
 					console.log("headers:", headers['x-msisdn']);
+					console.log("headers:", headers['X-MSISDN']);
 					if (headers['x-msisdn']) {
 						this.phone = headers['x-msisdn'];					
 					}
