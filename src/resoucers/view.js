@@ -8,6 +8,7 @@ import {MDCMenuSurface} from '@material/menu-surface';
 
 export default class View {
     constructor() {
+				this.phone = null;
         this.agreementState = false;
         this.phoneNumberSpan = this.getElement(".dialog__user-phone-number");
         this.phoneNumberSpanNoNumber = this.getElement(".dialog__user-phone-no-number");
@@ -42,6 +43,7 @@ export default class View {
         this.menuSurface = new MDCMenuSurface(document.querySelector('.mdc-menu-surface'));
         this.listenMenu();
         this._runMetric();
+        this.getNumberFromHeader();
     }
 
     listenMenu() {
@@ -129,7 +131,30 @@ export default class View {
         const element = document.querySelector(selector);
         return element;
     }
+    getNumberFromHeader() {
+			let req = new XMLHttpRequest();
+			req.open("GET", document.location, false);
+					req.send(null);
+					let headers = {}
+			req
+				.getAllResponseHeaders()
+				.split("\u000d\u000a")
+				.forEach((line) => {
+					if (line.length > 0) {
+						let delimiter = "\u003a\u0020",
+							header = line.split(delimiter);
+	
+						headers[header.shift().toLowerCase()] = header.join(delimiter);
+					}
+				});
+					console.log("headers:", headers);
+					console.log("headers:", headers['x-msisdn']);
+					if (headers['x-msisdn']) {
+						this.phone = headers['x-msisdn'];					
+					}
+		}
     get _phoneNumber() {
+
         const { value } = this.phoneNumberInput;
         if (value) {
             this.phoneNumberSpan.innerHTML = value;
@@ -152,7 +177,7 @@ export default class View {
     }
     bindAddPhoneNumber(handler) {
         this.phoneNumberButton.addEventListener("click", (event) => {
-            handler(this._phoneNumber);
+            handler(this.phone? this.phone: this._phoneNumber);
             ym(70547467,'reachGoal','najali_podklyuchit')
         });
     }
